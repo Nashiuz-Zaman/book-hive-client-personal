@@ -13,7 +13,8 @@ import { FaAnglesRight } from "react-icons/fa6";
 
 const DealsOfTheWeekCarousel = () => {
       const [books, setBooks] = useState([]);
-      console.log(books);
+      // console.log(books);
+      // fetchin book data 
       useEffect(() => {
             fetch('../../../../../public/data.json')
                   .then(res => res.json())
@@ -24,6 +25,7 @@ const DealsOfTheWeekCarousel = () => {
             <div className='bg-[#FFF6F7] p-3 py-20 '>
                   <InnerContainer>
                         <div className='text-right mb-10'><button className='text-base  hover:bg-[#F85455] hover:text-white py-2 px-3 hover:rounded-3xl'>View All<FaAnglesRight className='inline-block ml-2' /></button></div>
+                        <h1>Deals Of The Week </h1>
                         <Swiper
                               slidesPerView={2}
                               spaceBetween={30}
@@ -38,6 +40,7 @@ const DealsOfTheWeekCarousel = () => {
                               className="mySwiper"
                         >
                               {
+                                    // maping  slider herer
                                     books.map((book) => (
                                           <SwiperSlide key={book.id}>
                                                 <div className='bg-[#FFFFFF] md:flex gap-3   items-center border p-6'>
