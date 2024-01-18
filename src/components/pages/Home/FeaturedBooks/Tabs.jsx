@@ -15,16 +15,8 @@ import { FaRegStar } from "react-icons/fa";
 const Tabs = ({ tabs = [] }) => {
   const [activeTab, setActiveTab] = useState(0);
   const [tabData, setTabData] = useState([]);
-  const ratingComponent = (
-    <Rating
-      placeholderRating={2}
-      emptySymbol={<FaRegStar className="mask mask-star-2 bg-gray-400" />}
-      placeholderSymbol={
-        <FaRegStar className="mask mask-star-2 bg-orange-400" />
-      }
-      fullSymbol={<FaRegStar className="mask mask-star-2 bg-orange-400" />}
-    />
-  );
+
+  // fetching data temp
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -38,6 +30,17 @@ const Tabs = ({ tabs = [] }) => {
 
     fetchData();
   }, [activeTab, tabs]);
+
+  const ratingComponent = (
+    <Rating
+      placeholderRating={2}
+      emptySymbol={<FaRegStar className="mask mask-star-2 bg-gray-400" />}
+      placeholderSymbol={
+        <FaRegStar className="mask mask-star-2 bg-orange-400" />
+      }
+      fullSymbol={<FaRegStar className="mask mask-star-2 bg-orange-400" />}
+    />
+  );
 
   const handleTabClick = (index) => {
     setActiveTab(index);

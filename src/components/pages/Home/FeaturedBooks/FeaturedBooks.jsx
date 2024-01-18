@@ -3,9 +3,9 @@ import Tabs from "./Tabs";
 
 const FeaturedBooks = () => {
   const tabs = [
-    { label: "Featured", url: "../arrival.json" },
-    { label: "On Sale", url: "../onSale.json" },
-    { label: "Most Viewed", url: "../viewed.json" },
+    { label: "Featured", url: "/arrival.json" },
+    { label: "On Sale", url: "/onSale.json" },
+    { label: "Most Viewed", url: "/viewed.json" },
   ];
   return (
     <div>
