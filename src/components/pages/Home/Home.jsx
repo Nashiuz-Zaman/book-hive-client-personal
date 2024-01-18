@@ -1,13 +1,15 @@
+import DealsOfTheWeekCarousel from "./dealsOfTheWeekCarousel/dealsOfTheWeekCarousel";
 import FeaturedBooks from "./FeaturedBooks/FeaturedBooks";
 
 const Home = () => {
-  return (
-    <div>
-      <h2>bwenrnrn</h2>
-      <h3>Category</h3>
+  return (<div>
+       <section>
       <FeaturedBooks />
-    </div>
-  );
-};
+      </section>
+  
+      <section>
+      <DealsOfTheWeekCarousel />
+      </section>
+      </div>);
 
-export default Home;
+  export default Home;
