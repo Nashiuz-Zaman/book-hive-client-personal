@@ -24,15 +24,15 @@ import { addressData } from "../../../uiData/addressData";
 
 const Footer = () => {
   const socialLinksClasses =
-    "text-xl  hover:text-primary transition-all duration-150 cursor-pointer";
+    "text-xl hover:text-primary transition-all duration-150 cursor-pointer";
   const paymentMethodClasses =
-    " text-primary  hover:text-primary transition-all duration-150 cursor-pointer";
+    "text-primary hover:text-primary transition-all duration-150 cursor-pointer";
 
   return (
-    <footer className="pt-sectionGapMd border-t border-lightBorder">
+    <footer className="mt-auto pt-sectionGapMd border-t border-lightBorder">
       <InnerContainer>
         {/* Join Our Newsletter */}
-        <div className="space-y-6 pt-sectionGapMd">
+        <div className="space-y-6">
           <div className="space-y-2">
             <h1 className="text-3xl text-center">Join Our Newsletter</h1>
             <p className="text-red-400 text-center">
@@ -40,6 +40,7 @@ const Footer = () => {
               and upcoming collections
             </p>
           </div>
+
           <form className="space-x-4 text-center">
             <input
               className="border-[1px] border-black p-4 md:w-1/4 lg:w-1/4 w-full py-3"

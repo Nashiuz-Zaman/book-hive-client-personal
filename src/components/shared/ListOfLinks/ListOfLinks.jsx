@@ -16,13 +16,13 @@ const ListOfLinks = ({
     <ul className={`flex flex-col gap-1 ${modifyClasses}`}>
       {/* these links will always be here */}
       {linksData &&
-        linksData.map((option) => {
+        linksData.map((option, i) => {
           // if hashed link present then return this part, if not then return the next part
 
           // hashed link
           if (option.hashed) {
             return (
-              <li key={option.id}>
+              <li key={i}>
                 <HashLink className={linkClasses} to={option.url}>
                   {option.text}
                 </HashLink>
@@ -32,7 +32,7 @@ const ListOfLinks = ({
 
           // normal link
           return (
-            <li key={option.id}>
+            <li key={i}>
               <Link className={linkClasses} to={option.url}>
                 {option.text}
               </Link>
