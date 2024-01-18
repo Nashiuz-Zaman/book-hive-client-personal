@@ -27,6 +27,7 @@
     "react-router-hash-link": "^2.4.3",
     "react-toastify": "^10.0.3",
     "sort-by": "^1.2.0",
+    "swiper": "^11.0.5",
     "tailwind-scrollbar": "^3.0.5"
   },
   "devDependencies": {

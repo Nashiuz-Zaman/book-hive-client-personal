@@ -1,5 +1,9 @@
+import DealsOfTheWeekCarousel from "./dealsOfTheWeekCarousel/dealsOfTheWeekCarousel";
+
 const Home = () => {
-  return <div></div>;
+  return <div>
+      <DealsOfTheWeekCarousel></DealsOfTheWeekCarousel>
+  </div>;
 };
 
 export default Home;
