@@ -29,7 +29,7 @@ const Footer = () => {
     "text-primary hover:text-primary transition-all duration-150 cursor-pointer";
 
   return (
-    <footer className="pt-sectionGapMd border-t border-lightBorder">
+    <footer className="mt-auto pt-sectionGapMd border-t border-lightBorder">
       <InnerContainer>
         {/* Join Our Newsletter */}
         <div className="space-y-6">
