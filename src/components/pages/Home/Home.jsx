@@ -1,5 +1,9 @@
+import Featured from "./Featured/Featured";
+
 const Home = () => {
-  return <div></div>;
+  return <div>
+    <Featured></Featured>
+  </div>;
 };
 
 export default Home;
