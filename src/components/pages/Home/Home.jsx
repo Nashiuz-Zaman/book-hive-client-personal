@@ -5,7 +5,7 @@ import FeaturedBooks from "./FeaturedBooks/FeaturedBooks";
 
 const Home = () => {
   return (
-    <div>
+    <div className="space-y-sectionGapMd mb-sectionGapMd">
       <section>
         <InnerContainer>
           <FeaturedBooks />
