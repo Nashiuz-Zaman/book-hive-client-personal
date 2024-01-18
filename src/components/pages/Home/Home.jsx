@@ -1,9 +1,17 @@
-import Featured from "./Featured/Featured";
+import DealsOfTheWeekCarousel from "./dealsOfTheWeekCarousel/dealsOfTheWeekCarousel";
+import FeaturedBooks from "./FeaturedBooks/FeaturedBooks";
 
 const Home = () => {
-  return <div>
-    <Featured></Featured>
-  </div>;
-};
+  return (<div>
+       <section>
+      <FeaturedBooks />
+      </section>
+  
+      <section>
+      <DealsOfTheWeekCarousel />
+      </section>
+      </div>);
 
-export default Home;
+  };
+
+  export default Home;
