@@ -1,10 +1,12 @@
 // react
 import PropTypes from "prop-types";
 
+// react router imports
+import { Link } from "react-router-dom";
+
 // components
 import InnerContainer from "../../containers/InnerContainer/InnerContainer";
 import BrandLogo from "../BrandLogo/BrandLogo";
-
 import ListOfLinks from "../ListOfLinks/ListOfLinks";
 
 // react icons
@@ -13,19 +15,12 @@ import {
   FaXTwitter,
   FaInstagram,
   FaYoutube,
-  FaCcMastercard,
-  FaCcPaypal,
-  FaStripe,
 } from "react-icons/fa6";
-
-import { IoIosArrowUp } from "react-icons/io";
 
 // data
 import logoPrimary from "./../../../assets/websiteLogo/logo-primary.webp";
 import { footerOptions, currentYear } from "../../../uiData/footerData";
 import { addressData } from "../../../uiData/addressData";
-import { Link } from "react-router-dom";
-import { key } from "localforage";
 
 const Footer = () => {
   const socialLinksClasses =
@@ -59,26 +54,22 @@ const Footer = () => {
         </div>
 
         <div className="mb-14 grid grid-cols-1 md:grid-cols-5 pt-sectionGapMd ">
-          {/* follow us social media */}
           <div>
             {/* website logo */}
-            <BrandLogo
-              imageSource={logoPrimary}
-              modifyClasses="mb-6"
-              
-            />
+            <BrandLogo imageSource={logoPrimary} modifyClasses="mb-6" />
+
             {/* address and links */}
             {addressData.addressDetails.map((data) => {
               return <h1>{data}</h1>;
             })}
-            <div className=" mt-2">
+            <div className="mt-2">
               <h1>{addressData.phone}</h1>
               <h1>{addressData.email}</h1>
             </div>
             {/* social media icons */}
-            <div className={``}>
+            <div>
               {/* social media icons */}
-              <div className=" text-2xl flex items-center gap-4 mt-6">
+              <div className="text-2xl flex items-center gap-4 mt-6">
                 <a
                   className={socialLinksClasses}
                   href="https://www.facebook.com"
@@ -106,31 +97,30 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          {}
-          {/* list of links */}
 
+          {/* list of links */}
           {footerOptions?.map((option) => {
             return (
               <div key={option.id}>
                 <h3 className="mb-6 mt-3 font-bold">{option.headingText}</h3>
-
-                <ListOfLinks modifyClasses="gap-2"  linksData={option.options} />
+                <ListOfLinks modifyClasses="gap-2" linksData={option.options} />
               </div>
             );
           })}
         </div>
       </InnerContainer>
       {/* divider */}
-      <button></button>
+
       <hr />
       {/* copyright part */}
       <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-center text-center ">
         <div>
-          <small className=" 2xl:text-lg">
+          <small className="2xl:text-lg">
             &copy; {currentYear} Bookhive, All rights reserved
           </small>
         </div>
-        <div className=" text-2xl flex items-center gap-4 mt-2">
+
+        <div className="text-2xl flex items-center gap-4 mt-2">
           <Link className={paymentMethodClasses}>
             <img src="https://i.ibb.co/X3Y21Vs/Discover-logo.png" />
           </Link>
