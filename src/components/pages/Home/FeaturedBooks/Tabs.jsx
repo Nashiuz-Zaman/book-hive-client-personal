@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import Tab from "./Tab";
-import Shared from "./SmallBookCard";
 import Rating from "react-rating";
 import { FaRegStar } from "react-icons/fa";
-import SmallBookCard from "./SmallBookCard";
+import SmallBookCard from "../../../shared/SmallBookCard/SmallBookCard";
 const Tabs = ({ tabs }) => {
     const [activeTab, setActiveTab] = useState(0);
     const [tabData, setTabData] = useState([]);
