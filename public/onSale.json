@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.postimg.cc/3NZ3pfW4/The-Silent-Patient-Alex-Michaelides-Buy-Online-Bookbins-1.png",
+        "bookName": "The Silent Patient",
+        "author": "Alex Michaelides",
+        "price": 9.99,
+        "edition": "Special Discount Edition",
+        "category": "On sale"
+    },
+    {
+        "id": 2,
+        "image": "https://i.postimg.cc/3NmSSWvz/53-CE19-F3-B6-BB-4-E58-A388-2-AA38813-BC91-Img400.jpg",
+        "bookName": "Educated",
+        "author": "Tara Westover",
+        "price": 8.49,
+        "edition": "Limited Time Offer Edition",
+        "category": "On sale"
+    },
+    {
+        "id": 3,
+        "image": "https://i.postimg.cc/gjWq0sxB/where-the-crawdads-sing.png",
+        "bookName": "Where the Crawdads Sing",
+        "author": "Delia Owens",
+        "price": 10.99,
+        "edition": "Clearance Edition",
+        "category": "On sale"
+    },
+    {
+        "id": 4,
+        "image": "https://i.postimg.cc/xCT9SDRs/p12770646-p-v12-ar.jpg",
+        "bookName": "The Girl on the Train",
+        "author": "Paula Hawkins",
+        "price": 7.99,
+        "edition": "Markdown Edition",
+        "category": "On sale"
+    },
+    {
+        "id": 5,
+        "image": "https://i.postimg.cc/8CkLxcqx/circe.jpg",
+        "bookName": "Circe",
+        "author": "Madeline Miller",
+        "price": 11.25,
+        "edition": "Discounted Hardcover Edition",
+        "category": "On sale"
+    },
+    {
+        "id": 6,
+        "image": "https://i.postimg.cc/L4vFMbY7/815-D5snei-NL-AC-UF1000-1000-QL80.jpg",
+        "bookName": "The Night Circus",
+        "author": "Erin Morgenstern",
+        "price": 12.49,
+        "edition": "Flash Sale Edition",
+        "category": "On sale"
+    },
+    {
+        "id": 7,
+        "image": "https://i.postimg.cc/rFSnkdPp/61s-Wuf-HTu-TL-AC-UF894-1000-QL80.jpg",
+        "bookName": "Little Fires Everywhere",
+        "author": "Celeste Ng",
+        "price": 9.99,
+        "edition": "Reduced Price Edition",
+        "category": "On sale"
+    },
+    {
+        "id": 8,
+        "image": "https://i.postimg.cc/63njpypz/p16738758-v-v13-ac.jpg",
+        "bookName": "The Goldfinch",
+        "author": "Donna Tartt",
+        "price": 8.75,
+        "edition": "Clearance Hardcover Edition",
+        "category": "On sale"
+    }
+]
