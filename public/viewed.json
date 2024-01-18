@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.postimg.cc/mDDnVdd1/9789385492839.jpg",
+        "bookName": "The Adventures of Sherlock Holmes",
+        "author": "Arthur Conan Doyle",
+        "price": 15.99,
+        "edition": "Modern Library Edition",
+        "category": "Mystery"
+    },
+    {
+        "id": 2,
+        "image": "https://i.postimg.cc/s2Dyd46s/filters-quality-70.jpg",
+        "bookName": "The Grapes of Wrath",
+        "author": "John Steinbeck",
+        "price": 12.99,
+        "edition": "Harper Perennial Modern Classics",
+        "category": "Classics"
+    },
+    {
+        "id": 3,
+        "image": "https://i.postimg.cc/8PV2gbc9/MV5-BMjk4-MTQ4-NDIt-OGMy-NC00-Mm-Iw-LTg1-Nz-At-NTNl-NDgx-ZTBi-Mz-Zj-Xk-Ey-Xk-Fqc-Gde-QXVy-Mz-Y0-MTE3-Nz-U-V1.jpg",
+        "bookName": "Brave New World",
+        "author": "Aldous Huxley",
+        "price": 10.99,
+        "edition": "Signet Classics",
+        "category": "Dystopian"
+    },
+    {
+        "id": 4,
+        "image": "https://i.postimg.cc/FHSGrM6x/41-Zx-Muo-KDOL-AC-UF1000-1000-QL80.jpg",
+        "bookName": "The English Teacher",
+        "author": "R.K Narayan",
+        "price": 18.99,
+        "edition": "Bloomsbury Publishing",
+        "category": "Trending"
+    },
+    {
+        "id": 5,
+        "image": "https://i.postimg.cc/269nFGJ6/11127.jpg",
+        "bookName": "The Chronicles of Narnia",
+        "author": "C.S. Lewis",
+        "price": 14.99,
+        "edition": "Houghton Mifflin",
+        "category": "Fantasy"
+    },
+    {
+        "id": 6,
+        "image": "https://i.postimg.cc/7Y0mwvdn/p28828-p-v10-am.jpg",
+        "bookName": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "price": 16.99,
+        "edition": "Scholastic",
+        "category": "Fantasy"
+    },
+    {
+        "id": 7,
+        "image": "https://i.postimg.cc/vTFMxFzt/img-5f1f805e8a09a.jpg",
+        "bookName": "Beloved",
+        "author": "Toni Morrison",
+        "price": 11.99,
+        "edition": "Scribner",
+        "category": "Classics"
+    },
+    {
+        "id": 8,
+        "image": "https://i.postimg.cc/15QD087D/61-LQf6-GWT4-L-AC-UF1000-1000-QL80.jpg",
+        "bookName": "Romeo and Juliet",
+        "author": "William Shakespeare",
+        "price": 13.99,
+        "edition": "Vintage Classics",
+        "category": "Romance"
+    }
+]

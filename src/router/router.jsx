@@ -8,6 +8,7 @@ import AuthLayout from "./../components/layouts/AuthLayout"
 import Home from "../components/pages/Home/Home";
 import LoginPage from "../components/pages/LoginPage/LoginPage";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
