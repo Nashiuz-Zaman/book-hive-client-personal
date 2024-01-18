@@ -1,15 +1,24 @@
+// components
+import InnerContainer from "../../containers/InnerContainer/InnerContainer";
 import DealsOfTheWeekCarousel from "./dealsOfTheWeekCarousel/dealsOfTheWeekCarousel";
 import FeaturedBooks from "./FeaturedBooks/FeaturedBooks";
 
 const Home = () => {
-  return (<div>
-       <section>
-      <FeaturedBooks />
-      </section>
-  
+  return (
+    <div>
       <section>
-      <DealsOfTheWeekCarousel />
+        <InnerContainer>
+          <FeaturedBooks />
+        </InnerContainer>
       </section>
-      </div>);
 
-  export default Home;
+      <section>
+        <InnerContainer>
+          <DealsOfTheWeekCarousel />
+        </InnerContainer>
+      </section>
+    </div>
+  );
+};
+
+export default Home;
