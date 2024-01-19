@@ -34,6 +34,11 @@ const DealsOfTheWeekCarousel = () => {
 
                   <Swiper
                         slidesPerView={2}
+                        breakpoints={{
+                              320: { slidesPerView: 1 },
+                              768: { slidesPerView: 1 },
+                              1024: { slidesPerView:2}
+                        }}
                         spaceBetween={30}
                         keyboard={{
                               enabled: true,
@@ -83,7 +88,7 @@ const DealsOfTheWeekCarousel = () => {
                                                             </p>
                                                       </div>
                                                 </div>
-                                                <div className="grid grid-cols-2 md:grid-cols-4 divide-x gap-2  items-center justify-center ">
+                                                <div className="grid grid-cols-1 md:grid-cols-4  divide-x gap-2  items-center justify-center ">
                                                       <div className="bg-[#FFFFFF] ">
                                                             <h1 className="text-base text-left font-semibold">
                                                                   114 <span className="text-sm text-[#373739]">Days</span>
