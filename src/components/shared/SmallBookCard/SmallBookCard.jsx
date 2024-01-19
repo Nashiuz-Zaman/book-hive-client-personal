@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 
-const SmallBookCard = ({ image, edition, bookName, author, price, children }) => {
+const SmallBookCard = ({ image, edition, bookName, author, price, rating }) => {
     return (
         <div>
-
             <div className=" border p-5 space-y-5 h-[500px] ">
                 <img className=" h-[250px] w-[150px] rounded-md mx-auto" src={image} alt="" />
                 <div className=" justify-items-start px-50">
@@ -11,7 +10,7 @@ const SmallBookCard = ({ image, edition, bookName, author, price, children }) =>
                     <h4 className=" font-semibold">{bookName}</h4>
                     <h4 className=" text-xs text-gray-400">{author}</h4>
                     <h4 className=" font-semibold">$ {price}</h4>
-                    {children}
+                    {rating}
                 </div>
             </div>
 
@@ -25,6 +24,6 @@ SmallBookCard.propTypes = {
     price: PropTypes.number,
     edition: PropTypes.string,
     bookName: PropTypes.string,
-    children: PropTypes.any
+    rating: PropTypes.any
 }
 export default SmallBookCard;

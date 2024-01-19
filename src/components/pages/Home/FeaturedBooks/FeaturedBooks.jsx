@@ -11,8 +11,7 @@ const FeaturedBooks = () => {
         <div>
             <h3 className=' text-center text-2xl font-semibold my-5'>Featured Books</h3>
             <div>
-                <Tabs tabs={tabs} />
-                
+                <Tabs tabs={tabs} />       
             </div>
         </div>
     );

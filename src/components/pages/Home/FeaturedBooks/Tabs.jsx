@@ -8,10 +8,10 @@ const Tabs = ({ tabs }) => {
     const [tabData, setTabData] = useState([]);
     const ratingComponent = (
         <Rating placeholderRating={2}
-            emptySymbol={<FaRegStar className="mask mask-star-2 bg-gray-400" />
+            emptySymbol={<FaRegStar className="mask mask-star-2 text-gray-400 " />
             }
-            placeholderSymbol={<FaRegStar className="mask mask-star-2 bg-orange-400" />}
-            fullSymbol={<FaRegStar className="mask mask-star-2 bg-orange-400" />} />
+            placeholderSymbol={<FaRegStar className="mask mask-star-2 text-orange-500" />}
+            fullSymbol={<FaRegStar className="mask mask-star-2 text-orange-500" />} />
     )
     useEffect(() => {
         const fetchData = async () => {
@@ -50,7 +50,8 @@ const Tabs = ({ tabs }) => {
                     bookName={item.bookName}
                     author={item.author}
                     price={item.price}
-                >{ratingComponent}</SmallBookCard>
+                    rating={ratingComponent}
+                ></SmallBookCard>
                 ))}
             </div>
         </div>
