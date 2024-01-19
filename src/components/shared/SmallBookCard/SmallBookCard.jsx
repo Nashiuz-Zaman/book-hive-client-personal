@@ -1,13 +1,6 @@
 import PropTypes from "prop-types";
 
-const SmallBookCard = ({
-  image,
-  edition,
-  bookName,
-  author,
-  price,
-  children,
-}) => {
+const SmallBookCard = ({ image, edition, bookName, author, price, rating }) => {
   return (
     <div>
       <div className=" border p-5 space-y-5 h-[500px] ">
@@ -21,7 +14,7 @@ const SmallBookCard = ({
           <h4 className=" font-semibold">{bookName}</h4>
           <h4 className=" text-xs text-gray-400">{author}</h4>
           <h4 className=" font-semibold">$ {price}</h4>
-          {children}
+          {rating}
         </div>
       </div>
     </div>
@@ -34,6 +27,7 @@ SmallBookCard.propTypes = {
   price: PropTypes.number,
   edition: PropTypes.string,
   bookName: PropTypes.string,
-  children: PropTypes.any,
+  rating: PropTypes.any,
 };
+
 export default SmallBookCard;

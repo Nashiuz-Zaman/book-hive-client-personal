@@ -70,5 +70,41 @@
         "price": 13.99,
         "edition": "Vintage Classics",
         "category": "Romance"
+    },
+    {
+        "id": 9,
+        "image": "https://i.postimg.cc/HxfkJtsc/201503-book-secret-bees-949x1356.jpg",
+        "bookName": "The Secret Life of Bees",
+        "author": "Sue Monk Kidd",
+        "price": 11.99,
+        "edition": "Bestseller Edition",
+        "category": "Romance"
+    },
+    {
+        "id": 10,
+        "image": "https://i.postimg.cc/fTdMPXW5/Power-of-Habit-TP-nospine1.jpg",
+        "bookName": "The Power of Habit",
+        "author": "Charles Duhigg",
+        "price": 14.49,
+        "edition": "Influential Edition",
+        "category": "Romance"
+    },
+    {
+        "id": 11,
+        "image": "https://i.postimg.cc/9MfWgnzq/Sapiens-USA-website-cover.png",
+        "bookName": "Sapiens: A Brief History of Humankind",
+        "author": "Yuval Noah Harari",
+        "price": 16.99,
+        "edition": "Evolutionary Edition",
+        "category": "Romance"
+    },
+    {
+        "id": 12,
+        "image": "https://i.postimg.cc/J4sszGrB/The-Nightingale-1.jpg",
+        "bookName": "The Nightingale",
+        "author": "Kristin Hannah",
+        "price": 13.25,
+        "edition": "Heartwarming Edition",
+        "category": "Romance"
     }
 ]
