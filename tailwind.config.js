@@ -32,15 +32,16 @@ export default {
         primary: "#F85455",
         primaryDark: "#c64344",
         primaryLight: "#f97677",
-        primaryLightest: "#fdcccc",
+        primaryLightest: "#feeeee",
         textPrimary: "#1C1B1B",
         textMediumLight: "#1c1b1bcc",
         textLight: "#1c1b1b99",
         lightGray: "#f5f5f5",
         lightBorder: "#ddd",
+        blackLight: "#111",
       },
       fontFamily: {
-        default: "'Inter', sans-serif",
+        default: "'Raleway', sans-serif",
       },
       borderRadius: {
         default: "5px",
