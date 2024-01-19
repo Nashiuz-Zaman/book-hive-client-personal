@@ -34,7 +34,6 @@ const BestsellingBooks = () => {
       .then(res => setBooks(res.data))
   }, []);
 
-  console.log(books);
 
   const ratingComponent = (
     <Rating

@@ -60,8 +60,8 @@ const Footer = () => {
             <BrandLogo imageSource={logoPrimary} modifyClasses="mb-6" />
 
             {/* address and links */}
-            {addressData.addressDetails.map((data) => {
-              return <h1>{data}</h1>;
+            {addressData.addressDetails.map((data, i) => {
+              return <h1 key={i}>{data}</h1>;
             })}
             <div className="mt-2">
               <h1>{addressData.phone}</h1>

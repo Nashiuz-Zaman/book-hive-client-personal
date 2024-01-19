@@ -14,7 +14,7 @@ import { FaAnglesRight } from "react-icons/fa6";
 
 const DealsOfTheWeekCarousel = () => {
   const [books, setBooks] = useState([]);
-  console.log(books);
+
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
