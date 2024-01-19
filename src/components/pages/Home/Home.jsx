@@ -27,18 +27,6 @@ const Home = () => {
 
       <section>
         <InnerContainer>
-          <FeaturedCategories />
-        </InnerContainer>
-      </section>
-
-      <section>
-        <InnerContainer>
-          <BestsellingBooks />
-        </InnerContainer>
-      </section>
-
-      <section>
-        <InnerContainer>
           <FeaturedBooks />
         </InnerContainer>
       </section>
