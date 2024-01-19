@@ -8,6 +8,8 @@ const SmallBookCard = ({
   price,
   children,
 }) => {
+
+  console.log(bookName);
   return (
     <div>
       <div className=" border p-5 space-y-5 h-[500px] ">
