@@ -7,8 +7,8 @@ const Tab = ({ label, isActive, onClick }) => {
       <h3
         className={`tab ${
           isActive
-            ? " border-b border-black pb-4 font-semibold"
-            : " text-gray-500"
+            ? "cursor-pointer border-b border-black pb-4 font-semibold"
+            : "cursor-pointer text-gray-500"
         }`}
         onClick={onClick}
       >
@@ -20,6 +20,8 @@ const Tab = ({ label, isActive, onClick }) => {
 
 Tab.propTypes = {
   label: PropTypes.string,
+  isActive: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 export default Tab;

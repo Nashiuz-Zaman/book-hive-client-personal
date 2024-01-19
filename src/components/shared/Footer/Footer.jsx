@@ -43,25 +43,29 @@ const Footer = () => {
 
           <form className="space-x-4 text-center">
             <input
-              className="border-[1px] border-black p-4 md:w-1/4 lg:w-1/4 w-full py-3"
+              className="border-[1px] border-black p-4 w-[250px]  md:w-1/4 lg:w-1/4 w-full py-3"
               id="newsletter"
               type="text"
               placeholder="Enter email for weekly newsLetter"
             />
-            <button className="bg-[#16151A] text-white px-8 py-[13px]">
+            <button className="bg-[#16151A] mt-3 text-white px-8 py-[13px]">
               Subscribe
             </button>
           </form>
         </div>
 
-        <div className="mb-14 grid grid-cols-1 md:grid-cols-5 pt-sectionGapMd ">
+        <div className="mb-14 grid grid-cols-1 text-center lg:text-justify md:grid-cols-5 pt-sectionGapMd ">
           <div>
             {/* website logo */}
-            <BrandLogo imageSource={logoPrimary} modifyClasses="mb-6" />
+            <BrandLogo
+              imageSource={logoPrimary}
+              modifyClasses="mb-6 w-full mx-auto lg:mx-0  "
+            />
 
             {/* address and links */}
-            {addressData.addressDetails.map((data,index) => {
-              return <h1 key={index}>{data} </h1>;
+            {addressData.addressDetails.map((data, i) => {
+              return <h1 key={i}>{data}</h1>;
+
             })}
             <div className="mt-2">
               <h1>{addressData.phone}</h1>
@@ -70,7 +74,7 @@ const Footer = () => {
             {/* social media icons */}
             <div>
               {/* social media icons */}
-              <div className="text-2xl flex items-center gap-4 mt-6">
+              <div className="text-2xl flex justify-center lg:justify-start items-center   text-center  gap-4 mt-6">
                 <a
                   className={socialLinksClasses}
                   href="https://www.facebook.com"
@@ -104,7 +108,10 @@ const Footer = () => {
             return (
               <div key={option.id}>
                 <h3 className="mb-6 mt-3 font-bold">{option.headingText}</h3>
-                <ListOfLinks modifyClasses="gap-2" linksData={option.options} />
+                <ListOfLinks
+                  modifyClasses="gap-2 lg:gap-0"
+                  linksData={option.options}
+                />
               </div>
             );
           })}
@@ -138,8 +145,9 @@ const Footer = () => {
             <img src="https://i.ibb.co/x1d7dPy/visa.png" />
           </Link>
         </div>
+
         <div>
-          <select className="border py-2">
+          <select className="border py-2 mt-2 lg:mt-0">
             <option value="English">
               <img src="https://i.ibb.co/RTfqFM8/bd.png" className="w-4" />
               English(United States)
@@ -150,8 +158,8 @@ const Footer = () => {
             </option>
           </select>
         </div>
-        <div>
-          <select className="border py-2">
+        <div className="mt-2 lg:mt-0">
+          <select className="border py-2 px-[62px] lg:px-0">
             <option value="USD">USD</option>
             <option value="BDT">BDT</option>
           </select>

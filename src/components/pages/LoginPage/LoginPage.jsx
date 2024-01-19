@@ -21,7 +21,7 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm();
   const handleLogInFunc = (form) => {
-    console.log(form);
+    // console.log(form);
   };
   return (
     <div>

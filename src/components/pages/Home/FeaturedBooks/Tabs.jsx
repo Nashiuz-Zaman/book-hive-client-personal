@@ -1,6 +1,6 @@
 // react
-import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 
 // component
 import Tab from "./Tab";
@@ -12,11 +12,20 @@ import Rating from "react-rating";
 // react icons
 import { FaRegStar } from "react-icons/fa";
 
-const Tabs = ({ tabs = [] }) => {
+const Tabs = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);
   const [tabData, setTabData] = useState([]);
-
-  // fetching data temp
+  const ratingComponent = (
+    <Rating
+      placeholderRating={2}
+      emptySymbol={<FaRegStar className="mask mask-star-2 text-gray-400 " />}
+      placeholderSymbol={
+        <FaRegStar className="mask mask-star-2 text-orange-500" />
+      }
+      fullSymbol={<FaRegStar className="mask mask-star-2 text-orange-500" />}
+    />
+  );
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,17 +39,6 @@ const Tabs = ({ tabs = [] }) => {
 
     fetchData();
   }, [activeTab, tabs]);
-
-  const ratingComponent = (
-    <Rating
-      placeholderRating={2}
-      emptySymbol={<FaRegStar className="mask mask-star-2 bg-gray-400" />}
-      placeholderSymbol={
-        <FaRegStar className="mask mask-star-2 bg-orange-400" />
-      }
-      fullSymbol={<FaRegStar className="mask mask-star-2 bg-orange-400" />}
-    />
-  );
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -66,9 +64,8 @@ const Tabs = ({ tabs = [] }) => {
             bookName={item.bookName}
             author={item.author}
             price={item.price}
-          >
-            {ratingComponent}
-          </SmallBookCard>
+            rating={ratingComponent}
+          ></SmallBookCard>
         ))}
       </div>
     </div>
