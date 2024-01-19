@@ -38,7 +38,7 @@ const LoginPage = () => {
                 className="space-y-3"
               >
                 <h2 className="font-bold text-3xl text-[#F85455] mb-6">
-                  Please Log In
+                  Please Sign In
                 </h2>
 
                 {/* email */}
@@ -99,7 +99,7 @@ const LoginPage = () => {
                       to="/registration"
                       className="font-sm text-[#0091F7] hover:underline dark:text-primary-500"
                     >
-                      Sign up
+                      Registration
                     </Link>
                   </p>
                 </div>
@@ -111,7 +111,7 @@ const LoginPage = () => {
                   className="w-full bg-[#F75453] text-white font-semibold p-1 rounded-md hover:bg-black"
                   type="submit"
                 >
-                 Log In
+                 Sign In
                 </button>
               </form>
             </div>
