@@ -7,6 +7,7 @@ import AuthLayout from "./../components/layouts/AuthLayout"
 // page components
 import Home from "../components/pages/Home/Home";
 import LoginPage from "../components/pages/LoginPage/LoginPage";
+import RegistrationPage from "../components/pages/Registration/RegistrationPage";
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,19 @@ const router = createBrowserRouter([
       path:"/login",
       element:<LoginPage/>
     },
+    
+  ],
+  },
+  {
+    path: "/registration",
+    element: <AuthLayout/>,
+    children: [
+    // registration route 
+    {
+      path:"/registration",
+      element:<RegistrationPage/>
+    },
+    
   ],
   },
 

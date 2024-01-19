@@ -65,6 +65,7 @@ const Footer = () => {
             {/* address and links */}
             {addressData.addressDetails.map((data, i) => {
               return <h1 key={i}>{data}</h1>;
+
             })}
             <div className="mt-2">
               <h1>{addressData.phone}</h1>

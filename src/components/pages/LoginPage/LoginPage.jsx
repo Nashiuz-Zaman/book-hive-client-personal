@@ -1,8 +1,11 @@
 import { useState } from "react";
-import InnerContainer from "../../containers/InnerContainer/InnerContainer";
-import { useForm } from "react-hook-form";
-import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import InnerContainer from "../../containers/InnerContainer/InnerContainer";
+// react hook react-hook-form
+import { useForm } from "react-hook-form";
+// react-i cone 
+import { FaEye, FaEyeSlash, } from "react-icons/fa";
+// lottie animation 
 import Lottie from "lottie-react";
 import loginAnimation from "../../../animation-data/last.json";
 
@@ -35,7 +38,7 @@ const LoginPage = () => {
                 className="space-y-3"
               >
                 <h2 className="font-bold text-3xl text-[#F85455] mb-6">
-                  Please Log In
+                  Please Sign In
                 </h2>
 
                 {/* email */}
@@ -93,10 +96,10 @@ const LoginPage = () => {
                   <p className="text-sm font-medium text-black">
                     Don't have account ?
                     <Link
-                      to="/signup"
+                      to="/registration"
                       className="font-sm text-[#0091F7] hover:underline dark:text-primary-500"
                     >
-                      Sign up
+                      Registration
                     </Link>
                   </p>
                 </div>
@@ -108,7 +111,7 @@ const LoginPage = () => {
                   className="w-full bg-[#F75453] text-white font-semibold p-1 rounded-md hover:bg-black"
                   type="submit"
                 >
-                  Sign In
+                 Sign In
                 </button>
               </form>
             </div>
