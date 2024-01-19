@@ -70,5 +70,41 @@
         "price": 10.75,
         "edition": "Gold Foil Edition",
         "category": "New arrival"
+    },
+    {
+        "id": 9,
+        "image": "https://i.postimg.cc/kGxW1G24/38746485.jpg",
+        "bookName": "Becoming",
+        "author": "Michelle Obama",
+        "price": 18.99,
+        "edition": "Autobiography Edition",
+        "category": "New arrival"
+    },
+    {
+        "id": 10,
+        "image": "https://i.postimg.cc/MGF0XhkW/the-silent-observer-1.jpg",
+        "bookName": "The Silent Observer",
+        "author": "Claire Silent",
+        "price": 10.49,
+        "edition": "Observation Edition",
+        "category": "New arrival"
+    },
+    {
+        "id": 11,
+        "image": "https://i.postimg.cc/pTmZZPQh/81-AFe-Nm3-OSL-AC-UF1000-1000-QL80.jpg",
+        "bookName": "The Art of Learning",
+        "author": "Josh Waitzkin",
+        "price": 14.99,
+        "edition": "Mastery Edition",
+        "category": "New arrival"
+    },
+    {
+        "id": 12,
+        "image": "https://i.postimg.cc/cHCYST6V/song-of-achilles.jpg",
+        "bookName": "The Song of Achilles",
+        "author": "Madeline Miller",
+        "price": 12.75,
+        "edition": "Epic Edition",
+        "category": "New arrival"
     }
 ]

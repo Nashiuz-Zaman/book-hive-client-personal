@@ -64,11 +64,47 @@
     },
     {
         "id": 8,
-        "image": "https://i.postimg.cc/63njpypz/p16738758-v-v13-ac.jpg",
-        "bookName": "The Goldfinch",
-        "author": "Donna Tartt",
+        "image": "https://i.postimg.cc/x1q3Y07s/gullivers-travels-cover-image.jpg",
+        "bookName": "Gulliver's travel",
+        "author": "Janathan Swift",
         "price": 8.75,
         "edition": "Clearance Hardcover Edition",
+        "category": "On sale"
+    },
+    {
+        "id": 9,
+        "image": "https://i.postimg.cc/BnZwF9zD/atomic-habits-an-easy-proven-way-to-build-good-habits-break-bad-ones-by-james-clear-conversation-sta.jpg",
+        "bookName": "Atomic Habits",
+        "author": "James Clear",
+        "price": 12.99,
+        "edition": "Life-Changing Edition",
+        "category": "On sale"
+    },
+    {
+        "id": 10,
+        "image": "https://i.postimg.cc/59vGdmvH/36809135.jpg",
+        "bookName": "Where the Crawdads Sing",
+        "author": "Delia Owens",
+        "price": 15.49,
+        "edition": "Mystery Edition",
+        "category": "On sale"
+    },
+    {
+        "id": 11,
+        "image": "https://i.postimg.cc/VN6TxQB1/cover-lacks.png",
+        "bookName": "The Immortal Life of Henrietta Lacks",
+        "author": "Rebecca Skloot",
+        "price": 9.99,
+        "edition": "Scientific Edition",
+        "category": "On sale"
+    },
+    {
+        "id": 12,
+        "image": "https://i.postimg.cc/7YGF6ypL/The-Martian-Weir-novel.jpg",
+        "bookName": "The Martian",
+        "author": "Andy Weir",
+        "price": 17.75,
+        "edition": "Space Exploration Edition",
         "category": "On sale"
     }
 ]
