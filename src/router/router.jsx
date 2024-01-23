@@ -8,12 +8,16 @@ import AuthLayout from "./../components/layouts/AuthLayout";
 import Home from "../components/pages/Home/Home";
 import LoginPage from "../components/pages/LoginPage/LoginPage";
 import RegistrationPage from "../components/pages/Registration/RegistrationPage";
+import AllBooks from "../components/pages/AllBooks/AllBooks";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    children: [{ path: "/", element: <Home /> }],
+    children: [
+      { path: "/", element: <Home /> },
+      {path: "/allBooks", element: <AllBooks />}
+    ],
   },
   {
     path: "/login",
