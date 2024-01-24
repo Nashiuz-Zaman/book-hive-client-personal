@@ -77,10 +77,7 @@ const useLoginForm = () => {
         // set profile data, user should exist and the jwt token
         dispatch(setProfileData(googleLoginResponse.data.user));
         dispatch(setUserShouldExist(true));
-        localStorage.setItem(
-          "tokenExists",
-          googleLoginResponse.data.tokenExists
-        );
+        localStorage.setItem("token", googleLoginResponse.data.token);
 
         // send them where they were previously going
         if (state) {
@@ -131,7 +128,7 @@ const useLoginForm = () => {
           dispatch(setProfileData(loginResponse.data.user));
           dispatch(setUserShouldExist(true));
           // set profile and the jwt token in the localstorage
-          localStorage.setItem("tokenExists", loginResponse.data.tokenExists);
+          localStorage.setItem("token", loginResponse.data.token);
 
           // send them where they were previously going
           if (state) {
