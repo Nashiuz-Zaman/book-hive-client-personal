@@ -14,7 +14,7 @@ const FeaturedBooks = () => {
         Featured Books
       </h3>
       <div>
-        <Tabs tabs={tabs} />
+        <Tabs  />
       </div>
     </div>
   );
