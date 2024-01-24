@@ -12,9 +12,12 @@ import Rating from "react-rating";
 // react icons
 import { FaRegStar } from "react-icons/fa";
 
-const Tabs = ({ tabs }) => {
+const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [tabData, setTabData] = useState([]);
+  const [data, setData] = useState([]);
+  console.log(data);
+
   const ratingComponent = (
     <Rating
       placeholderRating={2}
@@ -25,46 +28,70 @@ const Tabs = ({ tabs }) => {
       fullSymbol={<FaRegStar className="mask mask-star-2 text-orange-500" />}
     />
   );
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(tabs[activeTab].url);
+        const response = await fetch('/featuredBooks.json');
         const data = await response.json();
-        setTabData(data);
+        setData(data);
+        console.log(data);
+        setTabData(data.filter((item) => item.bookCharacteristics.includes("featured")))
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData();
-  }, [activeTab, tabs]);
+  }, []);
 
-  const handleTabClick = (index) => {
-    setActiveTab(index);
+  const handleTabClick = (tabIndex) => {
+    setActiveTab(tabIndex);
+    if (tabIndex === 0) {
+      setTabData(data.filter((item) => item.bookCharacteristics.includes("featured")));
+    }
+    if (tabIndex === 1) {
+      setTabData(data.filter((item) => item.bookCharacteristics.includes('onSale')));
+    }
+    else if (tabIndex === 2) {
+      setTabData(data.filter((item) => item.bookCharacteristics.includes("mostViewed")));
+    }
   };
   return (
     <div>
       <div className=" flex flex-row gap-5 justify-center my-4">
-        {tabs.map((tab, idx) => (
-          <Tab
-            key={idx}
-            label={tab.label}
-            isActive={idx === activeTab}
-            onClick={() => handleTabClick(idx)}
-          ></Tab>
-        ))}
+        <Tab
+          label={'Featured'}
+          isActive={activeTab === 0}
+          onClick={() => handleTabClick(0)}
+        ></Tab>
+        <Tab
+          label={'On Sale'}
+          isActive={activeTab === 1}
+          onClick={() => handleTabClick(1)}
+        ></Tab>
+        <Tab
+          label={'Most Viewed'}
+          isActive={activeTab === 2}
+          onClick={() => handleTabClick(2)}
+        ></Tab>
       </div>
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 items-center justify-evenly">
-        {tabData.map((item) => (
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-evenly">
+        {tabData.map((item, index) => (
           <SmallBookCard
-            key={item.id}
-            image={item.image}
+            key={index}
+            image={item.imageSource}
             edition={item.edition}
-            bookName={item.bookName}
+            bookName={item.bookName} j
             author={item.author}
             price={item.price}
-            rating={ratingComponent}
+            rating={<Rating
+              placeholderRating={item.rating}
+              emptySymbol={<FaRegStar className="mask mask-star-2 text-gray-400 " />}
+              placeholderSymbol={
+                <FaRegStar className="mask mask-star-2 text-orange-500" />
+              }
+              fullSymbol={<FaRegStar className="mask mask-star-2 text-orange-500" />}
+            />}
           ></SmallBookCard>
         ))}
       </div>
