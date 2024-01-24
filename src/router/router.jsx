@@ -7,7 +7,8 @@ import AuthLayout from "./../components/layouts/AuthLayout";
 // page components
 import Home from "../components/pages/Home/Home";
 import LoginPage from "../components/pages/LoginPage/LoginPage";
-import RegistrationPage from "../components/pages/Registration/RegistrationPage";
+import ErrorPage from "./../components/pages/ErrorPage/ErrorPage";
+import RegistrationPage from "./../components/pages/RegistrationPage/RegistrationPage";
 import AllBooks from "../components/pages/AllBooks/AllBooks";
 
 const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       {path: "/allBooks", element: <AllBooks />}
     ],
+    errorElement: <ErrorPage />,
   },
   {
     path: "/login",
@@ -31,12 +33,12 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/register",
+    path: "/registration",
     element: <AuthLayout />,
     children: [
       // registration route
       {
-        path: "/register",
+        path: "/registration",
         element: <RegistrationPage />,
       },
     ],

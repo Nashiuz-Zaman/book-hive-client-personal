@@ -1,12 +1,12 @@
 // components
-import LoginForm from "./LoginForm/LoginForm";
 import InnerContainer from "../../containers/InnerContainer/InnerContainer";
+import RegistrationForm from "./RegistrationForm/RegistrationForm";
 
 // lottie animation
 import Lottie from "lottie-react";
 import loginAnimation from "../../../animation-data/last.json";
 
-const LoginPage = () => {
+const RegistrationPage = () => {
   return (
     <div className="min-h-screen flex justify-center items-center">
       <InnerContainer>
@@ -17,7 +17,7 @@ const LoginPage = () => {
             </div>
 
             <div>
-              <LoginForm modifyClasses="shadow-medium rounded-2xl" />
+              <RegistrationForm modifyClasses="shadow-medium rounded-2xl" />
             </div>
           </div>
         </section>
@@ -26,4 +26,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegistrationPage;

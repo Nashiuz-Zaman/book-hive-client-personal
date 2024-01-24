@@ -20,7 +20,6 @@ const useRegistrationForm = () => {
     dispatch,
     signup,
     updateUserProfile,
-    setUserAlreadyRegistered,
     setAppLoading,
     setUserShouldExist,
     setProfileData,
@@ -30,10 +29,6 @@ const useRegistrationForm = () => {
 
   // axios extraction
   const { axiosCustom } = useAxios();
-
-  // // extract functions from login and registration context
-  // const { registrationInfo, setRegistrationInfo } =
-  //   useLoginRegistrationProvider();
 
   // create the navigate function
   const navigate = useNavigate();
@@ -119,26 +114,28 @@ const useRegistrationForm = () => {
     // if there are no basic errors code will reach this line
     try {
       dispatch(setAppLoading(true));
-      const userExistsResponse = await axiosCustom.post(
-        "/users/checkExistence",
-        {
-          email: dataObject.email,
-        }
-      );
+      const userExistsResponse = await axiosCustom.post("/users/check", {
+        email: dataObject.email,
+      });
 
       // if user exists
       if (userExistsResponse.data.userExists) {
-        dispatch(setUserAlreadyRegistered(true));
+        dispatch(setRegistrationErrors(["User already exists"]));
         dispatch(setAppLoading(false));
-      } else {
-        // if user doesn't exist
+        return;
+      }
+      // if user doesn't exist
+      else {
         // upload image to imgbb first
-        const image = { image: dataObject.photo };
-        const imageUploadResponse = await axios.post(imageUploadAPI, image, {
-          headers: {
-            "content-type": "multipart/form-data",
-          },
-        });
+        const imageUploadResponse = await axios.post(
+          imageUploadAPI,
+          { image: dataObject.photo },
+          {
+            headers: {
+              "content-type": "multipart/form-data",
+            },
+          }
+        );
 
         // if upload to imgbb is successful then proceed to sign up in firebase
         if (imageUploadResponse.data.success) {
@@ -157,10 +154,11 @@ const useRegistrationForm = () => {
             // save new user object to database
             const user = {
               name: dataObject.userName,
-              password: dataObject.password,
               email: dataObject.email,
               imageSource: imageUploadResponse.data.data.display_url,
               role: "user",
+              favoriteGenres: [],
+              cardNumber: "Currently not available",
             };
 
             // create user api call
@@ -170,10 +168,7 @@ const useRegistrationForm = () => {
             if (userCreationResponse.data.success) {
               dispatch(setProfileData(userCreationResponse.data.user));
               dispatch(setUserShouldExist(true));
-              localStorage.setItem(
-                "tokenExists",
-                userCreationResponse.data.tokenExists
-              );
+              localStorage.setItem("token", userCreationResponse.data.token);
               navigate("/");
               dispatch(setAppLoading(false));
             }
