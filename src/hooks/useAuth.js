@@ -39,7 +39,6 @@ const useAuth = () => {
   // take states from redux store
   const {
     userShouldExist,
-    userAlreadyRegistered,
     profileData,
     appLoading,
     loginErrors,
@@ -53,7 +52,6 @@ const useAuth = () => {
   // take auth actions
   const {
     setUserShouldExist,
-    setUserAlreadyRegistered,
     setProfileData,
     setAppLoading,
     setLoginErrors,
@@ -65,7 +63,7 @@ const useAuth = () => {
 
   // if there is a jwt token in localstorage then user should exist
   useEffect(() => {
-    if (localStorage.getItem("tokenExists")) {
+    if (localStorage.getItem("token")) {
       dispatch(setUserShouldExist(true));
     }
   }, [dispatch, setUserShouldExist]);
@@ -143,7 +141,7 @@ const useAuth = () => {
         dispatch(setProfileData(null));
         dispatch(setUserShouldExist(false));
         setUser(null);
-        localStorage.removeItem("tokenExists");
+        localStorage.removeItem("token");
         dispatch(setAppLoading(false));
         showToast("Logged Out Successfully", "success");
       })
@@ -156,7 +154,6 @@ const useAuth = () => {
     // you have to call all the set methods inside dispatch method
     dispatch,
     setUserShouldExist,
-    setUserAlreadyRegistered,
     setProfileData,
     setUser,
     setAppLoading,
@@ -164,7 +161,6 @@ const useAuth = () => {
     setRegistrationErrors,
     // auth properties
     userShouldExist,
-    userAlreadyRegistered,
     profileData,
     user,
     appLoading,
