@@ -3,7 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   userShouldExist: false,
-  userAlreadyRegistered: false,
   profileData: null,
   appLoading: true,
   loginErrors: [],
@@ -16,9 +15,6 @@ const authSlice = createSlice({
   reducers: {
     setUserShouldExist: (state, { payload }) => {
       state.userShouldExist = payload;
-    },
-    setUserAlreadyRegistered: (state, { payload }) => {
-      state.userAlreadyRegistered = payload;
     },
     setProfileData: (state, { payload }) => {
       state.profileData = payload;
