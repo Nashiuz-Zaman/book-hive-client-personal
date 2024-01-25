@@ -5,6 +5,7 @@ import FeaturedBooks from "./FeaturedBooks/FeaturedBooks";
 import Banner from "./Banner/Banner";
 import BestsellingBooks from "./BestsellingBooks/BestsellingBooks";
 import FeaturedCategories from "./FeaturedCategories/FeaturedCategories";
+import PopularAuthers from "./PopularAuthors/PopularAuthers";
 
 const Home = () => {
   return (
@@ -34,6 +35,12 @@ const Home = () => {
       <section>
         <InnerContainer>
           <DealsOfTheWeekCarousel />
+        </InnerContainer>
+      </section>
+      
+      <section>
+        <InnerContainer>
+          <PopularAuthers />
         </InnerContainer>
       </section>
     </div>
