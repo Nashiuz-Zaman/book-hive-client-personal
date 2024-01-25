@@ -43,12 +43,12 @@ const Footer = () => {
 
           <form className="space-x-4 text-center">
             <input
-              className="border-[1px] border-black p-4 w-[250px]  md:w-1/4 lg:w-1/4 w-full py-3"
+              className="border-[1px] border-blackLight rounded-default p-4 w-[250px]  md:w-1/4 lg:w-1/4 w-full py-3"
               id="newsletter"
               type="text"
               placeholder="Enter email for weekly newsLetter"
             />
-            <button className="bg-[#16151A] mt-3 text-white px-8 py-[13px]">
+            <button className="bg-blackLight border border-blackLight hover:bg-textPrimary hover:border-textPrimary text-white  w-max transition-all duration-default rounded-default text-center px-6 py-3 3xl:text-xl 2xl:py-3 ">
               Subscribe
             </button>
           </form>
@@ -65,7 +65,6 @@ const Footer = () => {
             {/* address and links */}
             {addressData.addressDetails.map((data, i) => {
               return <h1 key={i}>{data}</h1>;
-
             })}
             <div className="mt-2">
               <h1>{addressData.phone}</h1>
