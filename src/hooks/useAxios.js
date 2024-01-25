@@ -6,7 +6,7 @@ import { serverUrl } from "../uiData/serverUrl";
 
 const axiosCustom = axios.create({
   baseURL: serverUrl,
-  withCredentials: true,
+  // withCredentials: true,
 });
 
 // const axiosSecure = axios.create({
