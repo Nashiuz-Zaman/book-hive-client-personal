@@ -1,6 +1,6 @@
 
 //data
-import { popularAuthers } from "../../../../uiData/PopularAuthersData";
+import { popularAuthers } from "../../../../uiData/PopularAuthorsData";
 //component
 import PopularAutherCard from "./PopularAutherCard";
 
