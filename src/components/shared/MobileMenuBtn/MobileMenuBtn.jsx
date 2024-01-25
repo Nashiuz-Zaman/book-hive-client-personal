@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 
 // icon
-import { IoIosMenu } from "react-icons/io";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
 
 const MobileMenuBtn = ({ openNavFunction, modifyClasses = "" }) => {
   return (
@@ -10,7 +10,7 @@ const MobileMenuBtn = ({ openNavFunction, modifyClasses = "" }) => {
       className={`block w-max  ${modifyClasses}`}
       onClick={openNavFunction}
     >
-      <IoIosMenu className="text-4xl text-black"></IoIosMenu>
+      <HiOutlineMenuAlt1 className="text-4xl text-black"></HiOutlineMenuAlt1>
     </button>
   );
 };
