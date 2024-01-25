@@ -7,12 +7,14 @@ import InnerContainer from "../../containers/InnerContainer/InnerContainer";
 import MobileNav from "./../MobileNav/MobileNav";
 import LinkBtn from "../LinkBtn/LinkBtn";
 import LoadingSpinner from "./../LoadingSpinner/LoadingSpinner";
+import LargeScreenNav from "../LargeScreenNav/LargeScreenNav";
 
 // hooks
 import useAuth from "./../../../hooks/useAuth";
 
 // data
 import logoPrimary from "./../../../assets/websiteLogo/logo-primary.webp";
+import { navOptions } from "../../../uiData/navigationOptions";
 
 const Header = ({ modifyClasses = "" }) => {
   // extra user from auth
@@ -23,11 +25,14 @@ const Header = ({ modifyClasses = "" }) => {
       <InnerContainer>
         <div className="grid grid-cols-1 gap-elementGapMd sm:gap-0 sm:grid-cols-2 items-center">
           {/* website logo */}
-          <div className="justify-self-center sm:justify-self-start">
+          <div className="justify-self-center sm:justify-self-start flex items-center gap-12">
+            {/* mobile nav button and mobile nav menu */}
+            <MobileNav />
             <BrandLogo
               imageSource={logoPrimary}
               imageModifyClasses="h-[3rem]"
             />
+            <LargeScreenNav navOptions={navOptions} />
           </div>
 
           {/* auth related options login/logout etc */}
@@ -47,11 +52,8 @@ const Header = ({ modifyClasses = "" }) => {
 
             {/* if app is finished loading and user is truthy, show the userprofile */}
             {!appLoading && profileData && (
-              <LinkBtn text="Go to Dashboard" url="/task-management" />
+              <LinkBtn text="Go to Dashboard" url="#" />
             )}
-
-            {/* mobile nav button and mobile nav menu */}
-            <MobileNav />
           </div>
         </div>
       </InnerContainer>
