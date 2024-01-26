@@ -6,10 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Keyboard, Pagination, Navigation } from "swiper/modules";
+import { Keyboard, Pagination} from "swiper/modules";
 
 // react icons
-import { IoMdStar, IoMdStarHalf } from "react-icons/io";
 import { FaAnglesRight } from "react-icons/fa6";
 import Rating from "react-rating";
 import { FaRegStar, FaStar } from "react-icons/fa";
