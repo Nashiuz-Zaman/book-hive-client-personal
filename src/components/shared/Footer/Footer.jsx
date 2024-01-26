@@ -43,7 +43,7 @@ const Footer = () => {
 
           <form className="space-x-4 text-center">
             <input
-              className="border-[1px] border-blackLight rounded-default p-4 w-[250px]  md:w-1/4 lg:w-1/4 w-full py-3"
+              className="border-[1px] border-blackLight rounded-default p-4 w-[250px]  md:w-1/4 lg:w-1/4 py-3"
               id="newsletter"
               type="text"
               placeholder="Enter email for weekly newsLetter"
