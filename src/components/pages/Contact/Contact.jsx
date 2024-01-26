@@ -17,7 +17,7 @@ const Contact = () => {
       .post("/email", {
         name: form.name.value,
         email: form.email.value,
-        message: form.message.value,
+        emailBody: form.message.value,
       })
       .then((res) => {
         if (res.data.success) {
