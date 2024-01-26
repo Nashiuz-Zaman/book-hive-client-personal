@@ -11,6 +11,8 @@ import { Keyboard, Pagination, Navigation } from "swiper/modules";
 // react icons
 import { IoMdStar, IoMdStarHalf } from "react-icons/io";
 import { FaAnglesRight } from "react-icons/fa6";
+import Rating from "react-rating";
+import { FaRegStar, FaStar } from "react-icons/fa";
 
 const DealsOfTheWeekCarousel = () => {
   const [books, setBooks] = useState([]);
@@ -20,12 +22,13 @@ const DealsOfTheWeekCarousel = () => {
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);
+  console.log(books)
 
   return (
     <div className="bg-[#FFF6F7] p-3 py-20 ">
       <div className=" md:flex md:justify-between md:items-center mb-10">
         <h1 className="text-2xl font-semibold">Deals of the week</h1>
-        <button className="text-base   hover:bg-[#F85455] hover:text-white py-2 px-3 hover:rounded-3xl">
+        <button className="text-base hover:bg-[#F85455] hover:text-white py-2 px-3 hover:rounded-3xl">
           View All
           <FaAnglesRight className="inline-block ml-2" />
         </button>
@@ -45,12 +48,11 @@ const DealsOfTheWeekCarousel = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        modules={[Keyboard, Pagination, Navigation]}
+        modules={[Keyboard, Pagination]}
         className="mySwiper"
       >
         {books.map((book) => (
-          <SwiperSlide key={book.id}>
+          <SwiperSlide key={book.id} className="mb-10">
             <div className="bg-[#FFFFFF]  flex gap-3  items-center border p-6">
               <div className="w-[180px] h-[190px] border">
                 <img
@@ -68,9 +70,15 @@ const DealsOfTheWeekCarousel = () => {
                     <p className=" text-base font-bold text-[#1E1E1E]">
                       $ {book.price}
                     </p>
-                    <p className=" text-yellow-300 flex">
-                      <IoMdStar /> <IoMdStar /> <IoMdStar /> <IoMdStarHalf />{" "}
-                    </p>
+                    {/* rating */}
+                    <Rating start={0}
+                            stop={5}
+                            step={1}
+                            emptySymbol={<FaRegStar />}
+                            fullSymbol={<FaStar />}
+                            initialRating={book.rating}
+                            readonly 
+                            className="text-yellow-300"/>
                     <p>
                       <span className="text-1xl text-[#1E1E1E] font-bold">
                         Hurry Up!
