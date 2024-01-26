@@ -5,12 +5,13 @@ import PropTypes from "prop-types";
 import BrandLogo from "./../BrandLogo/BrandLogo";
 import InnerContainer from "../../containers/InnerContainer/InnerContainer";
 import MobileNav from "./../MobileNav/MobileNav";
-import LinkBtn from "../LinkBtn/LinkBtn";
-import LoadingSpinner from "./../LoadingSpinner/LoadingSpinner";
+// import LinkBtn from "../LinkBtn/LinkBtn";
+// import LoadingSpinner from "./../LoadingSpinner/LoadingSpinner";
 import LargeScreenNav from "../LargeScreenNav/LargeScreenNav";
+import Searchbox from "../Searchbox/Searchbox";
 
 // hooks
-import useAuth from "./../../../hooks/useAuth";
+// import useAuth from "./../../../hooks/useAuth";
 
 // data
 import logoPrimary from "./../../../assets/websiteLogo/logo-primary.webp";
@@ -18,7 +19,7 @@ import { navOptions } from "../../../uiData/navigationOptions";
 
 const Header = ({ modifyClasses = "" }) => {
   // extra user from auth
-  const { profileData, appLoading } = useAuth();
+  // const { profileData, appLoading } = useAuth();
 
   return (
     <header className={`py-elementGapMd ${modifyClasses}`}>
@@ -36,9 +37,9 @@ const Header = ({ modifyClasses = "" }) => {
           </div>
 
           {/* auth related options login/logout etc */}
-          <div className="flex items-center gap-3 justify-self-center sm:justify-self-end">
+          <div className="justify-self-end">
             {/* loading Spinner */}
-            {appLoading && (
+            {/* {appLoading && (
               <LoadingSpinner
                 text="Checking User"
                 modifyClasses="text-2xl pr-4 text-primary"
@@ -48,12 +49,14 @@ const Header = ({ modifyClasses = "" }) => {
 
             {!appLoading && !profileData && (
               <LinkBtn text="Sign In" url="/login" />
-            )}
+            )} */}
 
             {/* if app is finished loading and user is truthy, show the userprofile */}
-            {!appLoading && profileData && (
+            {/* {!appLoading && profileData && (
               <LinkBtn text="Go to Dashboard" url="#" />
-            )}
+            )} */}
+
+            <Searchbox placeholder="Search for books by title" />
           </div>
         </div>
       </InnerContainer>
