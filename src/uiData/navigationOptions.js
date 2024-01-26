@@ -5,4 +5,5 @@ export const navOptions = [
   { id: 3, text: "Features", url: "#" },
   { id: 4, text: "Pages", url: "#" },
   { id: 5, text: "Blogs", url: "#" },
+  { id: 6, text: "Contact", url: "/contact" },
 ];
