@@ -25,7 +25,7 @@ const DealsOfTheWeekCarousel = () => {
     <div className="bg-[#FFF6F7] p-3 py-20 ">
       <div className=" md:flex md:justify-between md:items-center mb-10">
         <h1 className="text-2xl font-semibold">Deals of the week</h1>
-        <button className="text-base   hover:bg-[#F85455] hover:text-white py-2 px-3 hover:rounded-3xl">
+        <button className="text-base hover:bg-[#F85455] hover:text-white py-2 px-3 hover:rounded-3xl">
           View All
           <FaAnglesRight className="inline-block ml-2" />
         </button>
