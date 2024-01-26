@@ -10,6 +10,7 @@ import LoginPage from "../components/pages/LoginPage/LoginPage";
 import ErrorPage from "./../components/pages/ErrorPage/ErrorPage";
 import RegistrationPage from "./../components/pages/RegistrationPage/RegistrationPage";
 import AllBooks from "../components/pages/AllBooks/AllBooks";
+import Contact from "../components/pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { path: "/", element: <Home /> },
-      {path: "/allBooks", element: <AllBooks />}
+      { path: "/allBooks", element: <AllBooks /> },
+      { path: "/contact", element: <Contact /> }
     ],
     errorElement: <ErrorPage />,
   },
