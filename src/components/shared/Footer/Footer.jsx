@@ -147,14 +147,8 @@ const Footer = () => {
 
         <div>
           <select className="border py-2 mt-2 lg:mt-0">
-            <option value="English">
-              <img src="https://i.ibb.co/RTfqFM8/bd.png" className="w-4" />
-              English(United States)
-            </option>
-            <option value="Bangla">
-              <img src="https://i.ibb.co/71FYdqc/usa.png" className="w-4" />
-              Bangla
-            </option>
+            <option value="English">English (United States)</option>
+            <option value="Bangla">Bangla</option>
           </select>
         </div>
         <div className="mt-2 lg:mt-0">
