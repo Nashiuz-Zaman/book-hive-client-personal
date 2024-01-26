@@ -21,7 +21,7 @@ const DealsOfTheWeekCarousel = () => {
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);
-  console.log(books)
+  // console.log(books)
 
   return (
     <div className="bg-[#FFF6F7] p-3 py-20 ">
