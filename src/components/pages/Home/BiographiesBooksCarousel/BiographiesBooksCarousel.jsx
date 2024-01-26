@@ -28,7 +28,7 @@ const BiographiesBooksCarousel = () => {
                 setBooks(res.data.books);
             });
     }, [axiosCustom]);
-    console.log(books);
+    // console.log(books);
 
     return (
         <div>
@@ -59,7 +59,7 @@ const BiographiesBooksCarousel = () => {
                 className="mySwiper"
             >
                 {books.map((book) => (
-                    <SwiperSlide key={book._id} className="mb-7">
+                    <SwiperSlide key={book._id} className="mb-10">
                         <BiographiesSlideCard book={book} />
                     </SwiperSlide>
                 ))}
