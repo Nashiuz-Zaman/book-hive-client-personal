@@ -34,17 +34,15 @@ const Home = () => {
       </section>
 
       <section>
-        <InnerContainer>
-          <DealsOfTheWeekCarousel />
-        </InnerContainer>
+        <DealsOfTheWeekCarousel />
       </section>
-      
+
       <section>
         <InnerContainer>
           <BiographiesBooksCarousel />
         </InnerContainer>
       </section>
-      
+
       <section>
         <InnerContainer>
           <PopularAuthers />
