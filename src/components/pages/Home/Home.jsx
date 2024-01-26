@@ -34,11 +34,9 @@ const Home = () => {
       </section>
 
       <section>
-        <InnerContainer>
-          <DealsOfTheWeekCarousel />
-        </InnerContainer>
+        <DealsOfTheWeekCarousel />
       </section>
-      
+
       <section>
         <InnerContainer modifyClasses={"space-y-8"}>
           <BiographiesBooksCarousel />
