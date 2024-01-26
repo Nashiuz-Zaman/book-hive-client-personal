@@ -40,13 +40,8 @@ const Home = () => {
       </section>
       
       <section>
-        <InnerContainer>
+        <InnerContainer modifyClasses={"space-y-8"}>
           <BiographiesBooksCarousel />
-        </InnerContainer>
-      </section>
-      
-      <section>
-        <InnerContainer>
           <PopularAuthers />
         </InnerContainer>
       </section>
