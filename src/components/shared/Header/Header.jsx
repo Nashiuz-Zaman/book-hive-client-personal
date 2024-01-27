@@ -1,6 +1,9 @@
 // react
 import PropTypes from "prop-types";
 
+// react router
+import { Link } from "react-router-dom";
+
 // components
 import BrandLogo from "./../BrandLogo/BrandLogo";
 import InnerContainer from "../../containers/InnerContainer/InnerContainer";
@@ -22,8 +25,20 @@ const Header = ({ modifyClasses = "" }) => {
   // const { profileData, appLoading } = useAuth();
 
   return (
-    <header className={`py-elementGapMd ${modifyClasses}`}>
+    <header className={`pt-4 pb-elementGapMd ${modifyClasses}`}>
       <InnerContainer>
+        <div className="flex justify-end mb-4 gap-4">
+          <Link className="hover:text-black hover:underline" to={"/login"}>
+            Login
+          </Link>
+          |
+          <Link
+            className="hover:text-black hover:underline"
+            to={"/registration"}
+          >
+            Register Account
+          </Link>
+        </div>
         <div className="grid grid-cols-1 gap-elementGapMd sm:gap-0 sm:grid-cols-2 items-center">
           {/* website logo */}
           <div className="justify-self-center sm:justify-self-start flex items-center gap-12">
