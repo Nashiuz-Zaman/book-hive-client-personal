@@ -5,6 +5,8 @@ import FeaturedBooks from "./FeaturedBooks/FeaturedBooks";
 import Banner from "./Banner/Banner";
 import BestsellingBooks from "./BestsellingBooks/BestsellingBooks";
 import FeaturedCategories from "./FeaturedCategories/FeaturedCategories";
+import PopularAuthers from "./PopularAuthors/PopularAuthers";
+import BiographiesBooksCarousel from "./BiographiesBooksCarousel/BiographiesBooksCarousel";
 
 const Home = () => {
   return (
@@ -32,8 +34,13 @@ const Home = () => {
       </section>
 
       <section>
-        <InnerContainer>
-          <DealsOfTheWeekCarousel />
+        <DealsOfTheWeekCarousel />
+      </section>
+
+      <section>
+        <InnerContainer modifyClasses={"space-y-8"}>
+          <BiographiesBooksCarousel />
+          <PopularAuthers />
         </InnerContainer>
       </section>
     </div>

@@ -1,12 +1,6 @@
 // eslint
 import PropTypes from "prop-types";
 
-import { IoMdImages } from "react-icons/io";
-import { BiDish } from "react-icons/bi";
-import { RiHeartsLine } from "react-icons/ri";
-import { LuSwords } from "react-icons/lu";
-import { GiMaterialsScience } from "react-icons/gi";
-
 const CategoryCard = ({ card }) => {
   const { title, icon, bg_color, icon_color } = card;
 
