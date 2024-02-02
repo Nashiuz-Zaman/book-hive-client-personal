@@ -61,7 +61,7 @@ const Header = ({ modifyClasses = "" }) => {
           </div>
 
           {/* auth related options login/logout etc */}
-          <div className="justify-self-end">
+          <div className="justify-self-end relative">
             {/* loading Spinner */}
             {/* {appLoading && (
               <LoadingSpinner
@@ -81,6 +81,7 @@ const Header = ({ modifyClasses = "" }) => {
             )} */}
 
             <Searchbox placeholder="Search for books by title" />
+            {/* <div className="absolute w-[25rem] h-[25rem] bg-pink-300 z-10"></div> */}
           </div>
         </div>
       </InnerContainer>
