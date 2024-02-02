@@ -1,6 +1,22 @@
 import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { add } from "../../../features/cart/cartSlice";
 
-const SmallBookCard = ({ image, edition, bookName, author, price, rating }) => {
+const SmallBookCard = ({
+  image,
+  edition,
+  bookName,
+  author,
+  price,
+  rating,
+ item,
+}) => {
+console.log(item)
+  const dispatch = useDispatch();
+  const addToCart = (item) => {
+    // dispatch an add action
+    dispatch(add(item));
+  };
   return (
     <div>
       <div className=" border p-5 space-y-5 h-[500px] flex flex-col ">
@@ -18,6 +34,12 @@ const SmallBookCard = ({ image, edition, bookName, author, price, rating }) => {
           <h4 className=" font-semibold">$ {price}</h4>
           {rating}
         </div>
+        <button
+          onClick={() => addToCart(item)}
+          className="bg-blackLight border border-blackLight hover:bg-textPrimary hover:border-textPrimary text-white  w-max transition-all duration-default rounded-default text-center px-6 py-3 3xl:text-xl 2xl:py-3"
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );
