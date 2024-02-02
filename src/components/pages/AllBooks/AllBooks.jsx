@@ -14,16 +14,28 @@ const AllBooks = () => {
   const [checkedGenres, setCheckedGenres] = useState([]);
   const [categoryData, setCategoryData] = useState({ categories: [] });
   const [displayBooks, setDisplayBooks] = useState([]);
+  // const genres = [
+  //   "romance",
+  //   "comedy",
+  //   "tragedy",
+  //   "history",
+  //   "biography",
+  //   "fantasy",
+  //   "onSale",
+  //   "mostViewed",
+  //   "featured",
+  // ];
+
   const genres = [
-    "romance",
-    "comedy",
-    "tragedy",
-    "history",
-    "biography",
-    "fantasy",
-    "onSale",
-    "mostViewed",
-    "featured",
+    {name: "Romance", value: "romance"},
+    {name: "Comedy", value: "comedy"},
+    {name: "Tragedy", value: "tragedy"},
+    {name: "History", value: "history"},
+    {name: "Biography", value: "biography"},
+    {name: "Fantasy", value: "fantasy"},
+    {name: "On Sale", value: "onSale"},
+    {name: "Most Viewed", value: "mostViewed"},
+    {name: "Featured", value: "featured"}
   ];
 
   // for pagination
@@ -39,6 +51,7 @@ const AllBooks = () => {
         setBooksCount(res.data.count);
         setDisplayBooks(res.data.books);
         console.log(res.data.books);
+        console.log(res.data.count);
       });
   }, [axiosCustom, categoryData, booksPerPage, currentPage]);
 
@@ -60,10 +73,6 @@ const AllBooks = () => {
     console.log("Checked Genres:", checkedGenres);
 
     setCategoryData({ categories: checkedGenres });
-
-    // const filteredBooks = bookData.filter(book => checkedGenres.includes(book.category));
-    // console.log(filteredBooks);
-    // setDisplayBooks(filteredBooks);
   };
 
   // pagination function
@@ -83,19 +92,19 @@ const AllBooks = () => {
     <div>
       {/* checkbox filter section */}
       <form onSubmit={handleFilter}>
-        <div className="max-w-lg mx-auto grid grid-cols-3 ">
+        <div className="max-w-lg mx-auto grid grid-cols-3">
           {genres.map((genre, index) => {
             return (
-              <div className="p-2 flex justify-center gap-2 group" key={index}>
+              <div className="p-2 flex justify-start gap-2 group" key={index}>
                 <input
                   type="checkbox"
-                  value={genre}
+                  value={genre.value}
                   name="checkbox"
                   className="cursor-pointer accent-primary md:h-6 md:w-6"
                   onChange={handleChecked}
-                  checked={checkedGenres.includes(genre)}
+                  checked={checkedGenres.includes(genre.value)}
                 />
-                <label className="group-hover:text-primary">{genre}</label>
+                <label className="group-hover:text-primary">{genre.name}</label>
               </div>
             );
           })}

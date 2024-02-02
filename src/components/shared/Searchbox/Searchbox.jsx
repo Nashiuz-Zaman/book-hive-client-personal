@@ -1,10 +1,14 @@
 // react
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 // react icon
 import { HiMagnifyingGlass } from "react-icons/hi2";
 
 const Searchbox = ({ placeholder = "" }) => {
+
+  const [searchInput, setSearchInput] = useState("");
+
   return (
     <div className="flex items-center gap-4 bg-lightGray px-5 py-4 rounded-default">
       <HiMagnifyingGlass className="text-2xl text-textPrimary" />
