@@ -11,6 +11,7 @@ import ErrorPage from "./../components/pages/ErrorPage/ErrorPage";
 import RegistrationPage from "./../components/pages/RegistrationPage/RegistrationPage";
 import AllBooks from "../components/pages/AllBooks/AllBooks";
 import Contact from "../components/pages/Contact/Contact";
+import Cart from "../components/pages/Cart/Cart";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/allBooks", element: <AllBooks /> },
-      { path: "/contact", element: <Contact /> }
+      { path: "/contact", element: <Contact /> },
     ],
     errorElement: <ErrorPage />,
   },
@@ -42,6 +43,17 @@ const router = createBrowserRouter([
       {
         path: "/registration",
         element: <RegistrationPage />,
+      },
+    ],
+  },
+  {
+    path: "/cart",
+    element: <AuthLayout />,
+    children: [
+      // registration route
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

@@ -19,8 +19,12 @@ import Searchbox from "../Searchbox/Searchbox";
 // data
 import logoPrimary from "./../../../assets/websiteLogo/logo-primary.webp";
 import { navOptions } from "../../../uiData/navigationOptions";
+//cart icon
+import { FiShoppingCart } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 const Header = ({ modifyClasses = "" }) => {
+  const cartBooks=useSelector(state=> state.cart)
   // extra user from auth
   // const { profileData, appLoading } = useAuth();
 
@@ -37,6 +41,11 @@ const Header = ({ modifyClasses = "" }) => {
             to={"/registration"}
           >
             Register Account
+          </Link>
+          |
+          <Link className="hover:text-black hover:underline flex" to={"/cart"}>
+            <FiShoppingCart />
+            {cartBooks.length}
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-elementGapMd sm:gap-0 sm:grid-cols-2 items-center">
