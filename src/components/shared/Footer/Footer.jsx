@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 
 // react router imports
 import { Link } from "react-router-dom";
+// hooks
+import useToast from "../../../hooks/useToast";
+// axios
+import useAxios from "../../../hooks/useAxios";
 
 // components
 import InnerContainer from "../../containers/InnerContainer/InnerContainer";
@@ -23,6 +27,26 @@ import { footerOptions, currentYear } from "../../../uiData/footerData";
 import { addressData } from "../../../uiData/addressData";
 
 const Footer = () => {
+  const { axiosCustom } = useAxios();
+  const { showToast } = useToast();
+
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+
+  axiosCustom
+    .post("/email", {
+      email: form.email.value
+    })
+    .then((res) => {
+      if (res.data.success) {
+        form.reset();
+        showToast("Thank you for subscribing to our newsletter!", "success");
+      }
+    });
+};
+
   const socialLinksClasses =
     "text-xl hover:text-primary transition-all duration-150 cursor-pointer";
   const paymentMethodClasses =
@@ -41,12 +65,13 @@ const Footer = () => {
             </p>
           </div>
 
-          <form className="space-x-4 text-center">
+          <form onSubmit={handleSubmit} className="space-x-4 text-center">
             <input
               className="border-[1px] border-blackLight rounded-default p-4 w-[250px]  md:w-1/4 lg:w-1/4 py-3"
               id="newsletter"
               type="text"
-              placeholder="Enter email for weekly newsLetter"
+              name="email"
+              placeholder="Enter email for weekly newsLetter" required
             />
             <button className="bg-blackLight border border-blackLight hover:bg-textPrimary hover:border-textPrimary text-white  w-max transition-all duration-default rounded-default text-center px-6 py-3 3xl:text-xl 2xl:py-3 ">
               Subscribe
