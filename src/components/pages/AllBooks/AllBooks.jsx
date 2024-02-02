@@ -116,7 +116,7 @@ const AllBooks = () => {
       {/* all data section */}
       <div className="mt-16">
         <h2 className="text-center mb-6 text-primary text-4xl">
-          Books Found: ({booksCount})
+          {/* Books Found: ({booksCount}) */}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {displayBooks &&
