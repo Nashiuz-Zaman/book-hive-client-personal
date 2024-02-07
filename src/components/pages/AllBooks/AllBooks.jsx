@@ -14,44 +14,29 @@ const AllBooks = () => {
   const [checkedGenres, setCheckedGenres] = useState([]);
   const [categoryData, setCategoryData] = useState({ categories: [] });
   const [displayBooks, setDisplayBooks] = useState([]);
-  // const genres = [
-  //   "romance",
-  //   "comedy",
-  //   "tragedy",
-  //   "history",
-  //   "biography",
-  //   "fantasy",
-  //   "onSale",
-  //   "mostViewed",
-  //   "featured",
-  // ];
 
   const genres = [
-    {name: "Romance", value: "romance"},
-    {name: "Comedy", value: "comedy"},
-    {name: "Tragedy", value: "tragedy"},
-    {name: "History", value: "history"},
-    {name: "Biography", value: "biography"},
-    {name: "Fantasy", value: "fantasy"},
-    {name: "On Sale", value: "onSale"},
-    {name: "Most Viewed", value: "mostViewed"},
-    {name: "Featured", value: "featured"}
+    { name: "Romance", value: "romance" },
+    { name: "Comedy", value: "comedy" },
+    { name: "Tragedy", value: "tragedy" },
+    { name: "History", value: "history" },
+    { name: "Biography", value: "biography" },
+    { name: "Fantasy", value: "fantasy" },
+    { name: "On Sale", value: "onSale" },
+    { name: "Most Viewed", value: "mostViewed" },
+    { name: "Featured", value: "featured" },
   ];
 
   // for pagination
   const booksPerPage = 12;
   const numberOfPages = Math.ceil(booksCount / booksPerPage);
-  console.log("Total pages: ", numberOfPages);
 
   useEffect(() => {
     axiosCustom
       .post(`/books?limit=${booksPerPage}&skip=${currentPage}`, categoryData)
       .then((res) => {
-        console.log(res.data);
         setBooksCount(res.data.count);
         setDisplayBooks(res.data.books);
-        console.log(res.data.books);
-        console.log(res.data.count);
       });
   }, [axiosCustom, categoryData, booksPerPage, currentPage]);
 
@@ -70,23 +55,9 @@ const AllBooks = () => {
 
   const handleFilter = async (e) => {
     e.preventDefault();
-    console.log("Checked Genres:", checkedGenres);
 
     setCategoryData({ categories: checkedGenres });
   };
-
-  // pagination function
-  // const handlePrevButton = () =>{
-  //     if(currentPage > 0){
-  //         setCurrentPage(prevPage => prevPage - 1);
-  //     }
-  // }
-
-  // const handleNextButton = () =>{
-  //     if(currentPage < numberOfPages){
-  //         setCurrentPage(prevPage => prevPage + 1)
-  //     }
-  // }
 
   return (
     <div>

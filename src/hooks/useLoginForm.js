@@ -133,6 +133,8 @@ const useLoginForm = () => {
           // send them where they were previously going
           if (state) {
             navigate(state);
+          } else if (loginResponse.data.user.role === "admin") {
+            navigate("/admin/home");
           } else {
             navigate("/");
           }

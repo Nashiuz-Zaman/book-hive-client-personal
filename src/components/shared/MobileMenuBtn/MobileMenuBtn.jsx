@@ -10,7 +10,7 @@ const MobileMenuBtn = ({ openNavFunction, modifyClasses = "" }) => {
       className={`block w-max  ${modifyClasses}`}
       onClick={openNavFunction}
     >
-      <HiOutlineMenuAlt1 className="text-4xl text-black"></HiOutlineMenuAlt1>
+      <HiOutlineMenuAlt1 className="text-4xl text-inherit"></HiOutlineMenuAlt1>
     </button>
   );
 };

@@ -9,30 +9,29 @@ import { HashLink } from "react-router-hash-link";
 
 // components
 import MobileMenuCloseBtn from "../MobileMenuCloseBtn/MobileMenuCloseBtn";
-import BrandLogo from "../BrandLogo/BrandLogo";
 import MobileMenuBtn from "../MobileMenuBtn/MobileMenuBtn";
 import ButtonBtn from "./../ButtonBtn/ButtonBtn";
 
 // hook
-import useMobileNavigation from "../../../hooks/useMobileNavigation";
+import useDashboardMobileNav from "../../../hooks/useDashboardMobileNav";
 import useEscapeClose from "../../../hooks/useEscapeClose";
 import useAuth from "../../../hooks/useAuth";
 
-// white logo import
-import logoWhite from "./../../../assets/websiteLogo/logo-white.webp";
-
-const MobileNav = ({
+const DashboardMobileNav = ({
   navOptions,
   modifyClasses = "",
   MenuBtnModifyClasses = "",
 }) => {
   // extract mobile nav functionality
-  const { mobileNavOpen, openMobileNav, closeMobileNav } =
-    useMobileNavigation();
+  const {
+    dashboardMobileNavOpen,
+    openDashboardMobileNav,
+    closeDashboardMobileNav,
+  } = useDashboardMobileNav();
   const { profileData, logout } = useAuth();
 
   // add escape key close functionality
-  useEscapeClose(closeMobileNav);
+  useEscapeClose(closeDashboardMobileNav);
 
   // one single place for the link classes
   const linkClasses =
@@ -43,22 +42,21 @@ const MobileNav = ({
     <div className={`${modifyClasses}`}>
       <MobileMenuBtn
         modifyClasses={MenuBtnModifyClasses}
-        openNavFunction={openMobileNav}
+        openNavFunction={openDashboardMobileNav}
       />
 
       <nav
         className={`block h-screen fixed top-0 left-0 w-full sm:w-[50%] md:w-[40%] lg:w-[35%] 2xl:w-[20%] -translate-x-full origin-center transition-all duration-default z-40 ${
-          mobileNavOpen ? "!translate-x-0" : ""
-        } p-8 bg-gradient-to-br from-primaryDark to bg-primary`}
+          dashboardMobileNavOpen ? "!translate-x-0" : ""
+        } p-8 bg-blackLight`}
       >
         {/* X cross button to close nav */}
-        <MobileMenuCloseBtn clickHandler={closeMobileNav} />
+        <MobileMenuCloseBtn clickHandler={closeDashboardMobileNav} />
 
-        {/* brand logo part */}
-        <BrandLogo
-          imageSource={logoWhite}
-          modifyClasses="block w-max mr-auto mb-10"
-        />
+        {/* heading */}
+        <h2 className="text-lg md:text-3xl text-white font-semibold">
+          Welcome {profileData?.name}
+        </h2>
 
         {/* regular part */}
         <ul className="flex flex-col gap-3">
@@ -70,7 +68,7 @@ const MobileNav = ({
               // hashed link
               if (option.hashed) {
                 return (
-                  <li key={option.id} onClick={closeMobileNav}>
+                  <li key={option.id} onClick={closeDashboardMobileNav}>
                     <HashLink className={linkClasses} to={option.url}>
                       {option.text}
                     </HashLink>
@@ -80,7 +78,7 @@ const MobileNav = ({
 
               // normal link
               return (
-                <li key={option.id} onClick={closeMobileNav}>
+                <li key={option.id} onClick={closeDashboardMobileNav}>
                   <NavLink className={linkClasses} to={option.url}>
                     {option.text}
                   </NavLink>
@@ -94,7 +92,7 @@ const MobileNav = ({
             colorTheme="outlined"
             onClickFunction={() => {
               logout();
-              closeMobileNav();
+              closeDashboardMobileNav();
             }}
             modifyClasses="mt-elementGapSm"
           />
@@ -104,10 +102,10 @@ const MobileNav = ({
   );
 };
 
-MobileNav.propTypes = {
+DashboardMobileNav.propTypes = {
   navOptions: PropTypes.array,
   modifyClasses: PropTypes.string,
   MenuBtnModifyClasses: PropTypes.string,
 };
 
-export default MobileNav;
+export default DashboardMobileNav;
