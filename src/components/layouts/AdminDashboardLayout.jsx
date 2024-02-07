@@ -26,7 +26,7 @@ const AdminDashboardLayout = () => {
         {/* right side */}
         <div className="flex flex-col h-full">
           {/* page outlet */}
-          <div className="h-[calc(100vh-11.75rem)] overflow-y-auto">
+          <div className="h-[calc(100vh-11.0859375rem)] overflow-y-auto">
             <InnerContainer>
               <Outlet />
             </InnerContainer>
