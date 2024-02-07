@@ -18,12 +18,14 @@ import useMobileNavigation from "../../../hooks/useMobileNavigation";
 import useEscapeClose from "../../../hooks/useEscapeClose";
 import useAuth from "../../../hooks/useAuth";
 
-// must import data here to make this component work
-import { navOptions } from "../../../uiData/navigationOptions";
 // white logo import
 import logoWhite from "./../../../assets/websiteLogo/logo-white.webp";
 
-const MobileNav = ({ modifyClasses = "", MenuBtnModifyClasses = "" }) => {
+const MobileNav = ({
+  navOptions,
+  modifyClasses = "",
+  MenuBtnModifyClasses = "",
+}) => {
   // extract mobile nav functionality
   const { mobileNavOpen, openMobileNav, closeMobileNav } =
     useMobileNavigation();
@@ -103,6 +105,7 @@ const MobileNav = ({ modifyClasses = "", MenuBtnModifyClasses = "" }) => {
 };
 
 MobileNav.propTypes = {
+  navOptions: PropTypes.array,
   modifyClasses: PropTypes.string,
   MenuBtnModifyClasses: PropTypes.string,
 };
