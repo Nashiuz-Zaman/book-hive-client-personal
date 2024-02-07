@@ -22,7 +22,7 @@ const AdminDashboardHeader = ({ modifyClasses = "" }) => {
           <MobileNav modifyClasses="block xl:hidden" />
 
           <h1 className="text-lg md:text-3xl text-white font-semibold">
-            Welcome {profileData.name}
+            Welcome {profileData?.name}
           </h1>
         </div>
 
