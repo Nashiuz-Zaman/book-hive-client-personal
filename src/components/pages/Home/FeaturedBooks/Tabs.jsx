@@ -35,20 +35,6 @@ const Tabs = () => {
     />
   );
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch('/featuredBooks.json');
-  //       const data = await response.json();
-  //       setData(data);
-  //       console.log(data);
-  //       setTabData(data.filter((item) => item.bookCharacteristics.includes("featured")))
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
   useEffect(() => {
     axiosCustom
       .post("/books?limit=8&skip=0", { categories: [`${tabName}`] })
@@ -56,20 +42,7 @@ const Tabs = () => {
         setData(res.data.books);
       });
   }, [axiosCustom, tabName]);
-  console.log(data);
 
-  // const handleTabClick = (tabIndex) => {
-  //   setActiveTab(tabIndex);
-  //   if (tabIndex === 0) {
-  //     setTabData(data.filter((item) => item.bookCharacteristics.includes("featured")));
-  //   }
-  //   if (tabIndex === 1) {
-  //     setTabData(data.filter((item) => item.bookCharacteristics.includes('onSale')));
-  //   }
-  //   else if (tabIndex === 2) {
-  //     setTabData(data.filter((item) => item.bookCharacteristics.includes("mostViewed")));
-  //   }
-  // };
   const handleTabClick = (tabIndex) => {
     setActiveTab(tabIndex);
     if (tabIndex === 0) {
@@ -81,12 +54,6 @@ const Tabs = () => {
     }
   };
 
-  // const dispatch = useDispatch();
-
-  // const addToCart = (item) => {
-  //   // dispatch an add action
-  //   dispatch(add(item));
-  // };
   return (
     <div>
       <div className=" flex flex-row gap-5 justify-center my-4">

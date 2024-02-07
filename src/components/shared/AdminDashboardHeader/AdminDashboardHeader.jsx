@@ -19,7 +19,10 @@ const AdminDashboardHeader = ({ modifyClasses = "" }) => {
       <div className="flex items-center justify-between">
         {/* website logo */}
         <div className="flex gap-4 items-center sm:flex-row sm:gap-6">
-          <MobileNav modifyClasses="block xl:hidden" />
+          <MobileNav
+            modifyClasses="block xl:hidden"
+            MenuBtnModifyClasses="text-white"
+          />
 
           <h1 className="text-lg md:text-3xl text-white font-semibold">
             Welcome {profileData?.name}

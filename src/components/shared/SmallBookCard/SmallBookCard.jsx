@@ -9,9 +9,8 @@ const SmallBookCard = ({
   author,
   price,
   rating,
- item,
+  item,
 }) => {
-console.log(item)
   const dispatch = useDispatch();
   const addToCart = (item) => {
     // dispatch an add action
