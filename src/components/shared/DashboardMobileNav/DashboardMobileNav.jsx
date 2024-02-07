@@ -54,7 +54,7 @@ const DashboardMobileNav = ({
         <MobileMenuCloseBtn clickHandler={closeDashboardMobileNav} />
 
         {/* heading */}
-        <h2 className="text-lg md:text-3xl text-white font-semibold">
+        <h2 className="text-lg md:text-3xl text-white font-semibold mb-8">
           Welcome {profileData?.name}
         </h2>
 
