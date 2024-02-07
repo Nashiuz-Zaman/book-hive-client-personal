@@ -6,6 +6,9 @@ import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const DashboardNav = ({ navOptions, modifyClasses = "" }) => {
+  const linkClasses =
+    "block text-lg font-medium translate-x-0 hover:font-bold hover:translate-x-2 transition-all duration-default";
+
   return (
     <div className={`px-elementGapMd py-elementGapSm ${modifyClasses}`}>
       <h2 className="text-xl font-bold mb-12">Dashboard</h2>
@@ -19,7 +22,7 @@ const DashboardNav = ({ navOptions, modifyClasses = "" }) => {
             if (option.hashed) {
               return (
                 <li key={option.id}>
-                  <HashLink className={null} to={option.url}>
+                  <HashLink className={linkClasses} to={option.url}>
                     {option.text}
                   </HashLink>
                 </li>
@@ -29,7 +32,7 @@ const DashboardNav = ({ navOptions, modifyClasses = "" }) => {
             // normal link
             return (
               <li key={option.id}>
-                <NavLink className={null} to={option.url}>
+                <NavLink className={linkClasses} to={option.url}>
                   {option.text}
                 </NavLink>
               </li>
