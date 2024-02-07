@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 
 // components
-import MobileNav from "./../MobileNav/MobileNav";
+import DashboardMobileNav from "../DashboardMobileNav/DashboardMobileNav";
 import UserProfile from "./../UserProfile/UserProfile";
 
 // hooks
@@ -19,7 +19,7 @@ const AdminDashboardHeader = ({ modifyClasses = "" }) => {
       <div className="flex items-center justify-between">
         {/* website logo */}
         <div className="flex gap-4 items-center sm:flex-row sm:gap-6">
-          <MobileNav
+          <DashboardMobileNav
             modifyClasses="block xl:hidden"
             MenuBtnModifyClasses="text-white"
           />
