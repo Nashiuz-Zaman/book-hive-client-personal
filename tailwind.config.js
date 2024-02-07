@@ -41,7 +41,7 @@ export default {
         blackLight: "#111",
       },
       fontFamily: {
-        default: "'Raleway', sans-serif",
+        default: "'Montserrat', sans-serif",
       },
       borderRadius: {
         default: "5px",
