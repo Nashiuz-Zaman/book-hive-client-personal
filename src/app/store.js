@@ -6,6 +6,7 @@ import authReducer from "./../features/auth/authSlice";
 import mobileNavReducer from "./../features/mobileNav/mobileNavSlice";
 import backdropReducer from "./../features/backdrop/backdropSlice";
 import cartSlice from "../features/cart/cartSlice";
+import dashboardMobileNavReducer from "../features/dashboardMobileNav/dashboardMobileNavSlice";
 
 export const store = configureStore({
   reducer: {
@@ -14,5 +15,6 @@ export const store = configureStore({
     mobileNav: mobileNavReducer,
     backdrop: backdropReducer,
     cart: cartSlice,
+    dashboardMobileNav: dashboardMobileNavReducer,
   },
 });
