@@ -70,7 +70,7 @@ const Header = ({ modifyClasses = "" }) => {
           {/* website logo */}
           <div className="justify-self-center sm:justify-self-start flex items-center gap-12">
             {/* mobile nav button and mobile nav menu */}
-            <MobileNav />
+            <MobileNav navOptions={navOptions} />
             <BrandLogo
               imageSource={logoPrimary}
               imageModifyClasses="h-[3rem]"
