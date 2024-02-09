@@ -15,6 +15,7 @@ import InnerContainer from "../../../containers/InnerContainer/InnerContainer";
 import { FaAnglesRight } from "react-icons/fa6";
 import Rating from "react-rating";
 import { FaRegStar, FaStar } from "react-icons/fa";
+import CountDown from "./CountDown";
 
 const DealsOfTheWeekCarousel = () => {
   const [books, setBooks] = useState([]);
@@ -98,28 +99,7 @@ const DealsOfTheWeekCarousel = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-4  divide-x gap-2  items-center justify-center ">
-                    <div className="bg-[#FFFFFF] ">
-                      <h1 className="text-base text-left font-semibold">
-                        114 <span className="text-sm text-[#373739]">Days</span>
-                      </h1>
-                    </div>
-                    <div className="bg-[#FFFFFF] p-2">
-                      <h1 className="text-base ml-2 text-center font-semibold">
-                        04<span className="text-sm text-[#373739]">Hours</span>
-                      </h1>
-                    </div>
-                    <div className="bg-[#FFFFFF] p-2">
-                      <h1 className="text-base ml-2 text-center font-semibold">
-                        60 <span className="text-sm text-[#373739]">Mins</span>
-                      </h1>
-                    </div>
-                    <div className="bg-[#FFFFFF] p-2">
-                      <h1 className="text-base ml-2 text-center font-semibold">
-                        25 <span className="text-sm text-[#373739]">Secs</span>
-                      </h1>
-                    </div>
-                  </div>
+                  <CountDown></CountDown>
                   <div className="flex  justify-between w-full mt-1">
                     <p className=" text-sm  text-[#373739]">
                       Already Sold: {book.alreadySold}

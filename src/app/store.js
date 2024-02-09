@@ -7,6 +7,7 @@ import mobileNavReducer from "./../features/mobileNav/mobileNavSlice";
 import backdropReducer from "./../features/backdrop/backdropSlice";
 import cartSlice from "../features/cart/cartSlice";
 import dashboardMobileNavReducer from "../features/dashboardMobileNav/dashboardMobileNavSlice";
+import paymentInfoSlice from "../features/paymentInfoSlice/paymentInfoSlice";
 
 export const store = configureStore({
   reducer: {
@@ -16,5 +17,6 @@ export const store = configureStore({
     backdrop: backdropReducer,
     cart: cartSlice,
     dashboardMobileNav: dashboardMobileNavReducer,
+    paymentInfo:paymentInfoSlice,
   },
 });
