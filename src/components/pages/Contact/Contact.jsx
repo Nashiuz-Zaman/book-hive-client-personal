@@ -28,14 +28,14 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="my-sectionGapLg">
       <h1
         id="form"
-        className=" text-2xl md:text-5xl lg:text-7xl text-center font-bold text-red-400 mb-[5rem]"
+        className=" text-2xl md:text-5xl text-center font-bold text-red-400 mb-[5rem]"
       >
         Send us an email and get in touch.
       </h1>
-      <section className=" max-w-6xl mx-auto bg-black py-10 my-5 rounded-md">
+      <section className=" max-w-6xl mx-auto bg-primary py-10 rounded-3xl">
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col gap-4 justify-center px-5">
             <div className=" flex flex-col md:flex-row lg:flex-row items-center justify-center gap-5">
@@ -71,7 +71,7 @@ const Contact = () => {
               </label>
               <textarea
                 name="message"
-                className="w-full border border-gray px-5 h-[250px] rounded-md mt-3"
+                className="w-full border border-gray p-5 h-[250px] rounded-md mt-3"
                 placeholder="Message"
                 id="large"
                 type="text"
@@ -79,7 +79,7 @@ const Contact = () => {
             </div>
           </div>
           <div className=" flex justify-center">
-            <button className=" mt-5 bg-black py-3 rounded-md border font-semibold border-white w-[15%] text-white">
+            <button className=" mt-5 bg-white py-3 rounded-md border font-semibold border-white w-[15%] text-primary">
               Send
             </button>
           </div>
