@@ -27,7 +27,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import { useSelector } from "react-redux";
 
 const Header = ({ modifyClasses = "" }) => {
-  const cartBooks = useSelector((state) => state.cart);
+  const cartBooks = useSelector((state) => state.cart.addedItems);
   const { profileData } = useAuth();
 
   return (
