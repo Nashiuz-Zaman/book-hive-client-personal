@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { add } from "../../../features/cart/cartSlice";
+import useToast from "../../../hooks/useToast";
 
 const SmallBookCard = ({
   image,
@@ -11,10 +12,13 @@ const SmallBookCard = ({
   rating,
   item,
 }) => {
+  const { showToast} = useToast();
   const dispatch = useDispatch();
   const addToCart = (item) => {
     // dispatch an add action
     dispatch(add(item));
+    //show message
+    showToast("Book added to shopping cart.", "success");
   };
   return (
     <div>

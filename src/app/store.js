@@ -8,6 +8,8 @@ import backdropReducer from "./../features/backdrop/backdropSlice";
 import cartSlice from "../features/cart/cartSlice";
 import dashboardMobileNavReducer from "../features/dashboardMobileNav/dashboardMobileNavSlice";
 import usersReducer from "../features/users/usersSlice";
+import paymentInfoSlice from "../features/paymentInfoSlice/paymentInfoSlice";
+
 
 export const store = configureStore({
   reducer: {
@@ -18,5 +20,6 @@ export const store = configureStore({
     cart: cartSlice,
     dashboardMobileNav: dashboardMobileNavReducer,
     users: usersReducer,
+    paymentInfo:paymentInfoSlice,
   },
 });
