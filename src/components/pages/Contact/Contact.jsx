@@ -8,7 +8,7 @@ const Contact = () => {
   const { axiosCustom } = useAxios();
   const { showToast } = useToast();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
 
     const form = e.target;
@@ -19,7 +19,7 @@ const Contact = () => {
         email: form.email.value,
         emailBody: form.message.value,
       })
-      .then((res) => {
+      .then(res => {
         if (res.data.success) {
           form.reset();
           showToast("Message sent", "success");
@@ -31,8 +31,7 @@ const Contact = () => {
     <div className="my-sectionGapLg">
       <h1
         id="form"
-        className=" text-2xl md:text-5xl text-center font-bold text-red-400 mb-[5rem]"
-      >
+        className=" text-2xl md:text-5xl text-center font-bold text-red-400 mb-[5rem]">
         Send us an email and get in touch.
       </h1>
       <section className=" max-w-6xl mx-auto bg-primary py-10 rounded-3xl">

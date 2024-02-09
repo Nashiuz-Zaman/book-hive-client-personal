@@ -1,9 +1,6 @@
 // react
 import { Outlet } from "react-router-dom";
 
-// containers
-import InnerContainer from "./../containers/InnerContainer/InnerContainer";
-
 // components
 import AdminDashboardHeader from "../shared/AdminDashboardHeader/AdminDashboardHeader";
 import DashboardFooter from "../shared/DashboardFooter/DashboardFooter";
@@ -26,10 +23,8 @@ const AdminDashboardLayout = () => {
         {/* right side */}
         <div className="flex flex-col h-full">
           {/* page outlet */}
-          <div className="h-[calc(100vh-11.0859375rem)] overflow-y-auto py-elementGapLg">
-            <InnerContainer>
-              <Outlet />
-            </InnerContainer>
+          <div className="h-[calc(100vh-11.0859375rem)] overflow-y-auto py-elementGapLg px-elementGapSm md:px-elementGapMd xl:px-elementGapLg">
+            <Outlet />
           </div>
 
           {/* footer */}
