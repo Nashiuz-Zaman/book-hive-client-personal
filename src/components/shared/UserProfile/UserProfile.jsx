@@ -80,16 +80,16 @@ const UserProfile = ({ profile, logoutFunction }) => {
         {/* positioned div for display name */}
         <div
           ref={infoRef}
-          className={`custom-focus rounded-defaultLg w-max bg-white border border-[#e5e5e5] shadow-xl p-4 absolute top-0 right-0 -translate-x-[1.5rem] translate-y-[2rem] transition-all duration-150 space-y-5 text-left cursor-default ${
+          className={`custom-focus rounded-default w-[12rem] md:w-[15rem] bg-white border border-[#e5e5e5] shadow-xl p-4 absolute top-0 right-0 -translate-x-[1.5rem] translate-y-[2rem] transition-all duration-150 space-y-5 text-left cursor-default ${
             showInfoPanel ? "opacity-100 visible" : "opacity-0 collapse"
           }`}
         >
-          <p>{name}</p>
+          <p className="font-semibold md:text-lg">{name}</p>
           <Link
             to="/"
             className="block hover:text-primary transition-all duration-200"
           >
-            Home
+            Go to website
           </Link>
           <ButtonBtn
             onClickFunction={logoutFunction}
