@@ -15,6 +15,7 @@ import AllBooks from "../components/pages/AllBooks/AllBooks";
 import Contact from "../components/pages/Contact/Contact";
 import Cart from "../components/pages/Cart/Cart";
 import AdminHome from "../components/pages/Dashboard/AdminDashboard/AdminHome/AdminHome";
+import Users from "../components/pages/Dashboard/AdminDashboard/Users/Users";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "home",
         element: <AdminHome />,
+      },
+      {
+        path: "users",
+        element: <Users />,
       },
     ],
   },
